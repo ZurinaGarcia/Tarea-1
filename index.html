@@ -14597,7 +14597,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -14609,7 +14609,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 <span class="c1"># Como mi fuente me brinda información de diversas fechas, porcedo a filtrar los datos de 2020 directamente en el DataFrame original</span>
 <span class="n">poblacion</span> <span class="o">=</span> <span class="n">poblacion</span><span class="p">[</span><span class="n">poblacion</span><span class="p">[</span><span class="s1">'year'</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2020</span><span class="p">]</span>
-<span class="n">poblacion</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 
 <span class="c1"># Cambio en la selección de columnas específicas, por el nombre de columna "population"</span>
 <span class="n">poblacion</span> <span class="o">=</span> <span class="n">poblacion</span><span class="p">[[</span><span class="s1">'country'</span><span class="p">,</span> <span class="s1">'population'</span><span class="p">]]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'population'</span><span class="p">:</span> <span class="s1">'Population_in_2020'</span><span class="p">})</span>
@@ -14625,114 +14624,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-Index: 271 entries, 170 to 50596
-Data columns (total 79 columns):
- #   Column                                     Non-Null Count  Dtype  
----  ------                                     --------------  -----  
- 0   country                                    271 non-null    object 
- 1   year                                       271 non-null    int64  
- 2   iso_code                                   232 non-null    object 
- 3   population                                 240 non-null    float64
- 4   gdp                                        0 non-null      float64
- 5   cement_co2                                 234 non-null    float64
- 6   cement_co2_per_capita                      234 non-null    float64
- 7   co2                                        248 non-null    float64
- 8   co2_growth_abs                             236 non-null    float64
- 9   co2_growth_prct                            238 non-null    float64
- 10  co2_including_luc                          217 non-null    float64
- 11  co2_including_luc_growth_abs               217 non-null    float64
- 12  co2_including_luc_growth_prct              218 non-null    float64
- 13  co2_including_luc_per_capita               217 non-null    float64
- 14  co2_including_luc_per_gdp                  0 non-null      float64
- 15  co2_including_luc_per_unit_energy          208 non-null    float64
- 16  co2_per_capita                             236 non-null    float64
- 17  co2_per_gdp                                0 non-null      float64
- 18  co2_per_unit_energy                        222 non-null    float64
- 19  coal_co2                                   236 non-null    float64
- 20  coal_co2_per_capita                        236 non-null    float64
- 21  consumption_co2                            149 non-null    float64
- 22  consumption_co2_per_capita                 137 non-null    float64
- 23  consumption_co2_per_gdp                    0 non-null      float64
- 24  cumulative_cement_co2                      234 non-null    float64
- 25  cumulative_co2                             237 non-null    float64
- 26  cumulative_co2_including_luc               217 non-null    float64
- 27  cumulative_coal_co2                        236 non-null    float64
- 28  cumulative_flaring_co2                     236 non-null    float64
- 29  cumulative_gas_co2                         236 non-null    float64
- 30  cumulative_luc_co2                         229 non-null    float64
- 31  cumulative_oil_co2                         237 non-null    float64
- 32  cumulative_other_co2                       61 non-null     float64
- 33  energy_per_capita                          226 non-null    float64
- 34  energy_per_gdp                             0 non-null      float64
- 35  flaring_co2                                236 non-null    float64
- 36  flaring_co2_per_capita                     236 non-null    float64
- 37  gas_co2                                    236 non-null    float64
- 38  gas_co2_per_capita                         236 non-null    float64
- 39  ghg_excluding_lucf_per_capita              0 non-null      float64
- 40  ghg_per_capita                             0 non-null      float64
- 41  land_use_change_co2                        229 non-null    float64
- 42  land_use_change_co2_per_capita             218 non-null    float64
- 43  methane                                    0 non-null      float64
- 44  methane_per_capita                         0 non-null      float64
- 45  nitrous_oxide                              0 non-null      float64
- 46  nitrous_oxide_per_capita                   0 non-null      float64
- 47  oil_co2                                    237 non-null    float64
- 48  oil_co2_per_capita                         236 non-null    float64
- 49  other_co2_per_capita                       61 non-null     float64
- 50  other_industry_co2                         61 non-null     float64
- 51  primary_energy_consumption                 228 non-null    float64
- 52  share_global_cement_co2                    234 non-null    float64
- 53  share_global_co2                           237 non-null    float64
- 54  share_global_co2_including_luc             217 non-null    float64
- 55  share_global_coal_co2                      236 non-null    float64
- 56  share_global_cumulative_cement_co2         234 non-null    float64
- 57  share_global_cumulative_co2                237 non-null    float64
- 58  share_global_cumulative_co2_including_luc  217 non-null    float64
- 59  share_global_cumulative_coal_co2           236 non-null    float64
- 60  share_global_cumulative_flaring_co2        236 non-null    float64
- 61  share_global_cumulative_gas_co2            236 non-null    float64
- 62  share_global_cumulative_luc_co2            229 non-null    float64
- 63  share_global_cumulative_oil_co2            237 non-null    float64
- 64  share_global_cumulative_other_co2          61 non-null     float64
- 65  share_global_flaring_co2                   236 non-null    float64
- 66  share_global_gas_co2                       236 non-null    float64
- 67  share_global_luc_co2                       229 non-null    float64
- 68  share_global_oil_co2                       237 non-null    float64
- 69  share_global_other_co2                     61 non-null     float64
- 70  share_of_temperature_change_from_ghg       244 non-null    float64
- 71  temperature_change_from_ch4                220 non-null    float64
- 72  temperature_change_from_co2                244 non-null    float64
- 73  temperature_change_from_ghg                244 non-null    float64
- 74  temperature_change_from_n2o                220 non-null    float64
- 75  total_ghg                                  0 non-null      float64
- 76  total_ghg_excluding_lucf                   0 non-null      float64
- 77  trade_co2                                  138 non-null    float64
- 78  trade_co2_share                            138 non-null    float64
-dtypes: float64(76), int64(1), object(2)
-memory usage: 169.4+ KB
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14866,7 +14757,6 @@ memory usage: 169.4+ KB
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#LIMPIAR DATA 2: obesidad en adultos</span>
-
 
 <span class="c1"># Reiniciar los índices después de ordenar, ya que vemos como estos mantienen las posiciones anteriores</span>
 <span class="n">obesidad</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -15155,7 +15045,8 @@ memory usage: 169.4+ KB
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Ahora con la mayoría de data limpia, procedemos a revisarla</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ahora con la mayoría de data limpia, procedemos a revisarla</span>
+<span class="c1"># A pesar de que no es necesario, nos hace dar una idea de como nos quedaron las datas después de la limpieza</span>
 <span class="n">poblacion</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">obesidad</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">gripe</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
@@ -15197,8 +15088,10 @@ memory usage: 169.4+ KB
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Realizaré el primer merge entre mi data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Realizaré el primer merge entre mi dos de mis datas</span>
 <span class="n">merge_data1</span><span class="o">=</span><span class="n">poblacion</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">obesidad</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">'outer'</span><span class="p">,</span><span class="n">left_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">,</span><span class="n">right_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">)</span>
+
+<span class="c1"># Revisando el resultado del primer merge</span>
 <span class="n">merge_data1</span>
 </pre></div>
 
@@ -15332,7 +15225,11 @@ memory usage: 169.4+ KB
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">merge_data2</span><span class="o">=</span><span class="n">merge_data1</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">gripe</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">'left'</span><span class="p">,</span><span class="n">left_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">,</span><span class="n">right_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Como las datas que debo hacer son cuatro, debo realizar un nuevo merge, esta vez entre otra de mis datas</span>
+<span class="c1"># y el realizado anteriormente</span>
+<span class="n">merge_data2</span><span class="o">=</span><span class="n">merge_data1</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">gripe</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">'left'</span><span class="p">,</span><span class="n">left_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">,</span><span class="n">right_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">)</span>
+
+<span class="c1">#revisando el resultado de este segundo merge</span>
 <span class="n">merge_data2</span>
 </pre></div>
 
@@ -15478,9 +15375,11 @@ memory usage: 169.4+ KB
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#merge final</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Finalmente, tenemos el merge del resultado de la unión de mis propias datas con las brindadas por el profesor </span>
 
 <span class="n">merge_final</span><span class="o">=</span><span class="n">country_isos</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">merge_data2</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">'left'</span><span class="p">,</span><span class="n">left_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">,</span><span class="n">right_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">)</span>
+
+<span class="c1"># Revisando nuestro resultado, tenemos</span>
 <span class="n">merge_final</span>
 </pre></div>
 
@@ -15674,13 +15573,14 @@ memory usage: 169.4+ KB
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Ahora, con toda mi data, puedo realizar la limpieza final</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ahora, con toda mi data, puedo realizar la limpieza final</span>
 
-<span class="c1">#quiero asegurarme que los datos en mi columnas sean de un tipo de valor coherente (Números)</span>
-<span class="n">merge_final</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Quiero asegurarme que los datos en mi columnas sean de un tipo de valor coherente (Números)</span>
+<span class="c1"># por lo que es necesario deshacerme de valores como NaN, que pueden ser un obstáculo en la aplicación de mi nueva data</span>
+<span class="n">merge_final</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+
+<span class="c1"># Revisando el merge final</span>
 <span class="n">merge_final</span>
-
-<span class="c1">#Con esta acción, si es que quiero realizar gráfico de mis datas será de mayor ayuda</span>
 </pre></div>
 
      </div>
@@ -15873,11 +15773,17 @@ memory usage: 169.4+ KB
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">merge_final</span><span class="p">[</span><span class="s1">'Obesity_adult_prevalence_rate'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final</span><span class="p">[</span><span class="s1">'Obesity_adult_prevalence_rate'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Cambiando el tipo de dato de las celdas de las columnas de mi data</span>
+<span class="n">merge_final</span><span class="p">[</span><span class="s1">'Obesity_adult_prevalence_rate'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final</span><span class="p">[</span><span class="s1">'Obesity_adult_prevalence_rate'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
 <span class="n">merge_final</span><span class="p">[</span><span class="s1">'Population_in_2020'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final</span><span class="p">[</span><span class="s1">'Population_in_2020'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
 <span class="n">merge_final</span><span class="p">[</span><span class="s1">'numero_anual_muertes'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final</span><span class="p">[</span><span class="s1">'numero_anual_muertes'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
 
+<span class="c1"># Nos aseguramos de eliminar los espacios en blanco</span>
 <span class="n">merge_final</span><span class="o">.</span><span class="n">Obesity_adult_prevalence_rate</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">pat</span><span class="o">=</span><span class="sa">r</span><span class="s1">'\d'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">merge_final</span><span class="o">.</span><span class="n">Population_in_2020</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">pat</span><span class="o">=</span><span class="sa">r</span><span class="s1">'\d'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">merge_final</span><span class="o">.</span><span class="n">numero_anual_muertes</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">pat</span><span class="o">=</span><span class="sa">r</span><span class="s1">'\d'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Verificamos la aplicación de los códigos</span>
 <span class="n">merge_final</span>
 </pre></div>
 
@@ -16071,7 +15977,13 @@ memory usage: 169.4+ KB
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">merge_final</span><span class="o">.</span><span class="n">Population_in_2020</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">pat</span><span class="o">=</span><span class="sa">r</span><span class="s1">'\d'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reemplazamos los valores en blanco, por guiones bajos</span>
+<span class="n">merge_final</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'Officialstatename'</span><span class="p">:</span> <span class="s1">'Official_State_Name'</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">merge_final</span><span class="p">[</span><span class="s1">'Official_State_Name'</span><span class="p">]</span><span class="o">=</span><span class="n">merge_final</span><span class="p">[</span><span class="s1">'Official_State_Name'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span><span class="s1">'_'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">merge_final</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">=</span><span class="n">merge_final</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span><span class="s1">'_'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1">#Revisamos nuestra data</span>
+<span class="n">merge_final</span>
 </pre></div>
 
      </div>
@@ -16093,20 +16005,161 @@ memory usage: 169.4+ KB
 
 
 
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0      True
-1      True
-2      True
-3      True
-4      True
-       ... 
-166    True
-167    True
-168    True
-169    True
-170    True
-Name: Population_in_2020, Length: 171, dtype: bool</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>Official_State_Name</th>
+      <th>InternetccTLD</th>
+      <th>iso2</th>
+      <th>iso3</th>
+      <th>Population_in_2020</th>
+      <th>Obesity_adult_prevalence_rate</th>
+      <th>numero_anual_muertes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AFGHANISTAN</td>
+      <td>The_Islamic_Republic_of_Afghanistan</td>
+      <td>.af</td>
+      <td>AF</td>
+      <td>AFG</td>
+      <td>38972236.0</td>
+      <td>2.2</td>
+      <td>62.57</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ALBANIA</td>
+      <td>The_Republic_of_Albania</td>
+      <td>.al</td>
+      <td>AL</td>
+      <td>ALB</td>
+      <td>2866850.0</td>
+      <td>21.3</td>
+      <td>29.59</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ALGERIA</td>
+      <td>The_People's_Democratic_Republic_of_Algeria</td>
+      <td>.dz</td>
+      <td>DZ</td>
+      <td>DZA</td>
+      <td>43451668.0</td>
+      <td>16.0</td>
+      <td>54.98</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ANGOLA</td>
+      <td>The_Republic_of_Angola</td>
+      <td>.ao</td>
+      <td>AO</td>
+      <td>AGO</td>
+      <td>33428490.0</td>
+      <td>6.4</td>
+      <td>73.83</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ANTIGUA_AND_BARBUDA</td>
+      <td>Antigua_and_Barbuda</td>
+      <td>.ag</td>
+      <td>AG</td>
+      <td>ATG</td>
+      <td>92672.0</td>
+      <td>25.6</td>
+      <td>42.39</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>166</th>
+      <td>UZBEKISTAN</td>
+      <td>The_Republic_of_Uzbekistan</td>
+      <td>.uz</td>
+      <td>UZ</td>
+      <td>UZB</td>
+      <td>33526662.0</td>
+      <td>15.1</td>
+      <td>37.22</td>
+    </tr>
+    <tr>
+      <th>167</th>
+      <td>VIET_NAM</td>
+      <td>The_Socialist_Republic_of_Viet_Nam</td>
+      <td>.vn</td>
+      <td>VN</td>
+      <td>VNM</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>168</th>
+      <td>YEMEN</td>
+      <td>The_Republic_of_Yemen</td>
+      <td>.ye</td>
+      <td>YE</td>
+      <td>YEM</td>
+      <td>32284044.0</td>
+      <td>14.5</td>
+      <td>58.73</td>
+    </tr>
+    <tr>
+      <th>169</th>
+      <td>ZAMBIA</td>
+      <td>The_Republic_of_Zambia</td>
+      <td>.zm</td>
+      <td>ZM</td>
+      <td>ZMB</td>
+      <td>18927716.0</td>
+      <td>3.6</td>
+      <td>54.65</td>
+    </tr>
+    <tr>
+      <th>170</th>
+      <td>ZIMBABWE</td>
+      <td>The_Republic_of_Zimbabwe</td>
+      <td>.zw</td>
+      <td>ZW</td>
+      <td>ZWE</td>
+      <td>15669663.0</td>
+      <td>7.0</td>
+      <td>42.33</td>
+    </tr>
+  </tbody>
+</table>
+<p>171 rows × 8 columns</p>
+</div>
 </div>
 
 </div>
@@ -16123,7 +16176,11 @@ Name: Population_in_2020, Length: 171, dtype: bool</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">merge_final</span><span class="o">.</span><span class="n">numero_anual_muertes</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">pat</span><span class="o">=</span><span class="sa">r</span><span class="s1">'\d'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Eliminar espacios en blanco</span>
+<span class="n">merge_final</span><span class="o">=</span><span class="n">merge_final</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+
+<span class="c1"># Finalmente, nuestro resultado final es el siguiente</span>
+<span class="n">merge_final</span>
 </pre></div>
 
      </div>
@@ -16145,63 +16202,6 @@ Name: Population_in_2020, Length: 171, dtype: bool</pre>
 
 
 
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>0      True
-1      True
-2      True
-3      True
-4      True
-       ... 
-166    True
-167    True
-168    True
-169    True
-170    True
-Name: numero_anual_muertes, Length: 171, dtype: bool</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Reemplazar</span>
-<span class="n">merge_final</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'Officialstatename'</span><span class="p">:</span> <span class="s1">'Official_State_Name'</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">merge_final</span><span class="p">[</span><span class="s1">'Official_State_Name'</span><span class="p">]</span><span class="o">=</span><span class="n">merge_final</span><span class="p">[</span><span class="s1">'Official_State_Name'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span><span class="s1">'_'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">merge_final</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">=</span><span class="n">merge_final</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span><span class="s1">'_'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="n">merge_final</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
-
-
-
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <div>
 <style scoped>
@@ -16363,233 +16363,6 @@ Name: numero_anual_muertes, Length: 171, dtype: bool</pre>
 
 </div>
 
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Eliminar espacios en blanco</span>
-<span class="n">merge_final</span><span class="o">=</span><span class="n">merge_final</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
-<span class="n">merge_final</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Country</th>
-      <th>Official_State_Name</th>
-      <th>InternetccTLD</th>
-      <th>iso2</th>
-      <th>iso3</th>
-      <th>Population_in_2020</th>
-      <th>Obesity_adult_prevalence_rate</th>
-      <th>numero_anual_muertes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AFGHANISTAN</td>
-      <td>The_Islamic_Republic_of_Afghanistan</td>
-      <td>.af</td>
-      <td>AF</td>
-      <td>AFG</td>
-      <td>38972236.0</td>
-      <td>2.2</td>
-      <td>62.57</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>ALBANIA</td>
-      <td>The_Republic_of_Albania</td>
-      <td>.al</td>
-      <td>AL</td>
-      <td>ALB</td>
-      <td>2866850.0</td>
-      <td>21.3</td>
-      <td>29.59</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>ALGERIA</td>
-      <td>The_People's_Democratic_Republic_of_Algeria</td>
-      <td>.dz</td>
-      <td>DZ</td>
-      <td>DZA</td>
-      <td>43451668.0</td>
-      <td>16.0</td>
-      <td>54.98</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>ANGOLA</td>
-      <td>The_Republic_of_Angola</td>
-      <td>.ao</td>
-      <td>AO</td>
-      <td>AGO</td>
-      <td>33428490.0</td>
-      <td>6.4</td>
-      <td>73.83</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>ANTIGUA_AND_BARBUDA</td>
-      <td>Antigua_and_Barbuda</td>
-      <td>.ag</td>
-      <td>AG</td>
-      <td>ATG</td>
-      <td>92672.0</td>
-      <td>25.6</td>
-      <td>42.39</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>166</th>
-      <td>UZBEKISTAN</td>
-      <td>The_Republic_of_Uzbekistan</td>
-      <td>.uz</td>
-      <td>UZ</td>
-      <td>UZB</td>
-      <td>33526662.0</td>
-      <td>15.1</td>
-      <td>37.22</td>
-    </tr>
-    <tr>
-      <th>167</th>
-      <td>VIET_NAM</td>
-      <td>The_Socialist_Republic_of_Viet_Nam</td>
-      <td>.vn</td>
-      <td>VN</td>
-      <td>VNM</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>168</th>
-      <td>YEMEN</td>
-      <td>The_Republic_of_Yemen</td>
-      <td>.ye</td>
-      <td>YE</td>
-      <td>YEM</td>
-      <td>32284044.0</td>
-      <td>14.5</td>
-      <td>58.73</td>
-    </tr>
-    <tr>
-      <th>169</th>
-      <td>ZAMBIA</td>
-      <td>The_Republic_of_Zambia</td>
-      <td>.zm</td>
-      <td>ZM</td>
-      <td>ZMB</td>
-      <td>18927716.0</td>
-      <td>3.6</td>
-      <td>54.65</td>
-    </tr>
-    <tr>
-      <th>170</th>
-      <td>ZIMBABWE</td>
-      <td>The_Republic_of_Zimbabwe</td>
-      <td>.zw</td>
-      <td>ZW</td>
-      <td>ZWE</td>
-      <td>15669663.0</td>
-      <td>7.0</td>
-      <td>42.33</td>
-    </tr>
-  </tbody>
-</table>
-<p>171 rows × 8 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div>
