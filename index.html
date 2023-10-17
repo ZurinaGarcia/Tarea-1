@@ -14584,6 +14584,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
+
 <span class="c1"># Leer los archivos de datos en dataframes</span>
 
 <span class="n">country_isos</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">'country_isos.xlsx'</span><span class="p">))</span>
@@ -14756,7 +14757,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#LIMPIAR DATA 2: obesidad en adultos</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#LIMPIAR DATA 2: índice de obesidad en adultos</span>
 
 <span class="c1"># Reiniciar los índices después de ordenar, ya que vemos como estos mantienen las posiciones anteriores</span>
 <span class="n">obesidad</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -15037,7 +15038,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15045,9 +15046,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ahora con la mayoría de data limpia, procedemos a revisarla</span>
-<span class="c1"># A pesar de que no es necesario, nos hace dar una idea de como nos quedaron las datas después de la limpieza</span>
-<span class="n">poblacion</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">obesidad</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">gripe</span><span class="o">.</span><span class="n">shape</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">###########################################################################################################################</span>
 </pre></div>
 
      </div>
@@ -15055,32 +15054,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>((271, 2), (191, 2), (200, 2))</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15088,11 +15062,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Realizaré el primer merge entre mi dos de mis datas</span>
-<span class="n">merge_data1</span><span class="o">=</span><span class="n">poblacion</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">obesidad</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">'outer'</span><span class="p">,</span><span class="n">left_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">,</span><span class="n">right_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">)</span>
-
-<span class="c1"># Revisando el resultado del primer merge</span>
-<span class="n">merge_data1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">############################### PRIMER THEFUZZE #################################################</span>
 </pre></div>
 
      </div>
@@ -15100,124 +15070,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Country</th>
-      <th>Population_in_2020</th>
-      <th>Obesity_adult_prevalence_rate</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AFGHANISTAN</td>
-      <td>3.897224e+07</td>
-      <td>2.2</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>AFRICA</td>
-      <td>1.360677e+09</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>AFRICA (GCP)</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>ALAND ISLANDS</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>ALBANIA</td>
-      <td>2.866850e+06</td>
-      <td>21.3</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>280</th>
-      <td>CONGO, REPUBLIC OF THE</td>
-      <td>NaN</td>
-      <td>4.7</td>
-    </tr>
-    <tr>
-      <th>281</th>
-      <td>BURMA</td>
-      <td>NaN</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>282</th>
-      <td>KOREA, NORTH</td>
-      <td>NaN</td>
-      <td>3.9</td>
-    </tr>
-    <tr>
-      <th>283</th>
-      <td>TIMOR-LESTE</td>
-      <td>NaN</td>
-      <td>2.7</td>
-    </tr>
-    <tr>
-      <th>284</th>
-      <td>CONGO, DEMOCRATIC REPUBLIC OF THE</td>
-      <td>NaN</td>
-      <td>1.7</td>
-    </tr>
-  </tbody>
-</table>
-<p>285 rows × 3 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15225,146 +15078,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Como las datas que debo hacer son cuatro, debo realizar un nuevo merge, esta vez entre otra de mis datas</span>
-<span class="c1"># y el realizado anteriormente</span>
-<span class="n">merge_data2</span><span class="o">=</span><span class="n">merge_data1</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">gripe</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">'left'</span><span class="p">,</span><span class="n">left_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">,</span><span class="n">right_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">)</span>
-
-<span class="c1">#revisando el resultado de este segundo merge</span>
-<span class="n">merge_data2</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reviso los paises de cada una de mis datas, ver cuantos son distintos</span>
+<span class="n">OnlyPoblacion</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">poblacion</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">obesidad</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
+<span class="n">OnlyObesidad</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">obesidad</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">poblacion</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Country</th>
-      <th>Population_in_2020</th>
-      <th>Obesity_adult_prevalence_rate</th>
-      <th>numero_anual_muertes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AFGHANISTAN</td>
-      <td>3.897224e+07</td>
-      <td>2.2</td>
-      <td>62.57</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>AFRICA</td>
-      <td>1.360677e+09</td>
-      <td>NaN</td>
-      <td>63.92</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>AFRICA (GCP)</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>ALAND ISLANDS</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>ALBANIA</td>
-      <td>2.866850e+06</td>
-      <td>21.3</td>
-      <td>29.59</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>280</th>
-      <td>CONGO, REPUBLIC OF THE</td>
-      <td>NaN</td>
-      <td>4.7</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>281</th>
-      <td>BURMA</td>
-      <td>NaN</td>
-      <td>4.0</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>282</th>
-      <td>KOREA, NORTH</td>
-      <td>NaN</td>
-      <td>3.9</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>283</th>
-      <td>TIMOR-LESTE</td>
-      <td>NaN</td>
-      <td>2.7</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>284</th>
-      <td>CONGO, DEMOCRATIC REPUBLIC OF THE</td>
-      <td>NaN</td>
-      <td>1.7</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-<p>285 rows × 4 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15375,12 +15096,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Finalmente, tenemos el merge del resultado de la unión de mis propias datas con las brindadas por el profesor </span>
-
-<span class="n">merge_final</span><span class="o">=</span><span class="n">country_isos</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">merge_data2</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s1">'left'</span><span class="p">,</span><span class="n">left_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">,</span><span class="n">right_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">)</span>
-
-<span class="c1"># Revisando nuestro resultado, tenemos</span>
-<span class="n">merge_final</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">thefuzz</span> <span class="kn">import</span> <span class="n">process</span> <span class="k">as</span> <span class="n">fz</span>
+<span class="c1"># Realizar los cambios</span>
+<span class="n">changeMerge1</span><span class="o">=</span><span class="p">{</span><span class="n">f</span><span class="p">:</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">OnlyPoblacion</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> 
+                 <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">OnlyObesidad</span><span class="p">)</span>
+                 <span class="k">if</span> <span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">OnlyPoblacion</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span><span class="mi">90</span><span class="p">}</span>
+<span class="n">changeMerge1</span>
 </pre></div>
 
      </div>
@@ -15402,161 +15123,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Country</th>
-      <th>Officialstatename</th>
-      <th>InternetccTLD</th>
-      <th>iso2</th>
-      <th>iso3</th>
-      <th>Population_in_2020</th>
-      <th>Obesity_adult_prevalence_rate</th>
-      <th>numero_anual_muertes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AFGHANISTAN</td>
-      <td>The Islamic Republic of Afghanistan</td>
-      <td>.af</td>
-      <td>AF</td>
-      <td>AFG</td>
-      <td>38972236.0</td>
-      <td>2.2</td>
-      <td>62.57</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>ALBANIA</td>
-      <td>The Republic of Albania</td>
-      <td>.al</td>
-      <td>AL</td>
-      <td>ALB</td>
-      <td>2866850.0</td>
-      <td>21.3</td>
-      <td>29.59</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>ALGERIA</td>
-      <td>The People's Democratic Republic of Algeria</td>
-      <td>.dz</td>
-      <td>DZ</td>
-      <td>DZA</td>
-      <td>43451668.0</td>
-      <td>16.0</td>
-      <td>54.98</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>ANGOLA</td>
-      <td>The Republic of Angola</td>
-      <td>.ao</td>
-      <td>AO</td>
-      <td>AGO</td>
-      <td>33428490.0</td>
-      <td>6.4</td>
-      <td>73.83</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>ANTIGUA AND BARBUDA</td>
-      <td>Antigua and Barbuda</td>
-      <td>.ag</td>
-      <td>AG</td>
-      <td>ATG</td>
-      <td>92672.0</td>
-      <td>25.6</td>
-      <td>42.39</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>166</th>
-      <td>UZBEKISTAN</td>
-      <td>The Republic of Uzbekistan</td>
-      <td>.uz</td>
-      <td>UZ</td>
-      <td>UZB</td>
-      <td>33526662.0</td>
-      <td>15.1</td>
-      <td>37.22</td>
-    </tr>
-    <tr>
-      <th>167</th>
-      <td>VIET NAM</td>
-      <td>The Socialist Republic of Viet Nam</td>
-      <td>.vn</td>
-      <td>VN</td>
-      <td>VNM</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>168</th>
-      <td>YEMEN</td>
-      <td>The Republic of Yemen</td>
-      <td>.ye</td>
-      <td>YE</td>
-      <td>YEM</td>
-      <td>32284044.0</td>
-      <td>14.5</td>
-      <td>58.73</td>
-    </tr>
-    <tr>
-      <th>169</th>
-      <td>ZAMBIA</td>
-      <td>The Republic of Zambia</td>
-      <td>.zm</td>
-      <td>ZM</td>
-      <td>ZMB</td>
-      <td>18927716.0</td>
-      <td>3.6</td>
-      <td>54.65</td>
-    </tr>
-    <tr>
-      <th>170</th>
-      <td>ZIMBABWE</td>
-      <td>The Republic of Zimbabwe</td>
-      <td>.zw</td>
-      <td>ZW</td>
-      <td>ZWE</td>
-      <td>15669663.0</td>
-      <td>7.0</td>
-      <td>42.33</td>
-    </tr>
-  </tbody>
-</table>
-<p>171 rows × 8 columns</p>
-</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;BAHAMAS, THE&#39;: &#39;BAHAMAS&#39;,
+ &#39;CONGO, DEMOCRATIC REPUBLIC OF THE&#39;: &#39;DEMOCRATIC REPUBLIC OF CONGO&#39;,
+ &#39;CONGO, REPUBLIC OF THE&#39;: &#39;CONGO&#39;,
+ &#39;GAMBIA, THE&#39;: &#39;GAMBIA&#39;,
+ &#39;KOREA, NORTH&#39;: &#39;NORTH KOREA&#39;,
+ &#39;KOREA, SOUTH&#39;: &#39;SOUTH KOREA&#39;,
+ &#39;MACEDONIA&#39;: &#39;NORTH MACEDONIA&#39;}</pre>
 </div>
 
 </div>
@@ -15573,14 +15148,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#creamos una copia para realizar una vista de lo que serían la data si eliminamos los países que contienen NaN en alguna</span>
-<span class="c1"># de sus celdas</span>
-<span class="n">merge_final_copia</span> <span class="o">=</span> <span class="n">merge_final</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">filas_con_nan</span> <span class="o">=</span> <span class="n">merge_final_copia</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">filas_con_nan</span> <span class="o">=</span> <span class="n">merge_final_copia</span><span class="p">[</span><span class="n">filas_con_nan</span><span class="p">]</span>
-
-<span class="n">filas_con_nan</span>
-<span class="n">merge_final_copia</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'any'</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">obesidad</span><span class="o">.</span><span class="n">Country</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="n">changeMerge1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15588,7 +15156,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15596,196 +15164,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ahora, con toda mi data, puedo realizar la limpieza final</span>
-
-<span class="c1"># Quiero asegurarme que los datos en mi columnas sean de un tipo de valor coherente (Números)</span>
-<span class="c1"># por lo que es necesario deshacerme de valores como NaN, que pueden ser un obstáculo en la aplicación de mi nueva data</span>
-<span class="n">merge_final</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
-
-<span class="c1"># Revisando el merge final</span>
-<span class="n">merge_final</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#######################SEGUNDO THEFUZZE ##################</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Country</th>
-      <th>Officialstatename</th>
-      <th>InternetccTLD</th>
-      <th>iso2</th>
-      <th>iso3</th>
-      <th>Population_in_2020</th>
-      <th>Obesity_adult_prevalence_rate</th>
-      <th>numero_anual_muertes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AFGHANISTAN</td>
-      <td>The Islamic Republic of Afghanistan</td>
-      <td>.af</td>
-      <td>AF</td>
-      <td>AFG</td>
-      <td>38972236.0</td>
-      <td>2.2</td>
-      <td>62.57</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>ALBANIA</td>
-      <td>The Republic of Albania</td>
-      <td>.al</td>
-      <td>AL</td>
-      <td>ALB</td>
-      <td>2866850.0</td>
-      <td>21.3</td>
-      <td>29.59</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>ALGERIA</td>
-      <td>The People's Democratic Republic of Algeria</td>
-      <td>.dz</td>
-      <td>DZ</td>
-      <td>DZA</td>
-      <td>43451668.0</td>
-      <td>16.0</td>
-      <td>54.98</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>ANGOLA</td>
-      <td>The Republic of Angola</td>
-      <td>.ao</td>
-      <td>AO</td>
-      <td>AGO</td>
-      <td>33428490.0</td>
-      <td>6.4</td>
-      <td>73.83</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>ANTIGUA AND BARBUDA</td>
-      <td>Antigua and Barbuda</td>
-      <td>.ag</td>
-      <td>AG</td>
-      <td>ATG</td>
-      <td>92672.0</td>
-      <td>25.6</td>
-      <td>42.39</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>166</th>
-      <td>UZBEKISTAN</td>
-      <td>The Republic of Uzbekistan</td>
-      <td>.uz</td>
-      <td>UZ</td>
-      <td>UZB</td>
-      <td>33526662.0</td>
-      <td>15.1</td>
-      <td>37.22</td>
-    </tr>
-    <tr>
-      <th>167</th>
-      <td>VIET NAM</td>
-      <td>The Socialist Republic of Viet Nam</td>
-      <td>.vn</td>
-      <td>VN</td>
-      <td>VNM</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th>168</th>
-      <td>YEMEN</td>
-      <td>The Republic of Yemen</td>
-      <td>.ye</td>
-      <td>YE</td>
-      <td>YEM</td>
-      <td>32284044.0</td>
-      <td>14.5</td>
-      <td>58.73</td>
-    </tr>
-    <tr>
-      <th>169</th>
-      <td>ZAMBIA</td>
-      <td>The Republic of Zambia</td>
-      <td>.zm</td>
-      <td>ZM</td>
-      <td>ZMB</td>
-      <td>18927716.0</td>
-      <td>3.6</td>
-      <td>54.65</td>
-    </tr>
-    <tr>
-      <th>170</th>
-      <td>ZIMBABWE</td>
-      <td>The Republic of Zimbabwe</td>
-      <td>.zw</td>
-      <td>ZW</td>
-      <td>ZWE</td>
-      <td>15669663.0</td>
-      <td>7.0</td>
-      <td>42.33</td>
-    </tr>
-  </tbody>
-</table>
-<p>171 rows × 8 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15796,18 +15180,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Cambiando el tipo de dato de las celdas de las columnas de mi data</span>
-<span class="n">merge_final</span><span class="p">[</span><span class="s1">'Obesity_adult_prevalence_rate'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final</span><span class="p">[</span><span class="s1">'Obesity_adult_prevalence_rate'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
-<span class="n">merge_final</span><span class="p">[</span><span class="s1">'Population_in_2020'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final</span><span class="p">[</span><span class="s1">'Population_in_2020'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
-<span class="n">merge_final</span><span class="p">[</span><span class="s1">'numero_anual_muertes'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final</span><span class="p">[</span><span class="s1">'numero_anual_muertes'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
-
-<span class="c1"># Nos aseguramos de eliminar los espacios en blanco</span>
-<span class="n">merge_final</span><span class="o">.</span><span class="n">Obesity_adult_prevalence_rate</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">pat</span><span class="o">=</span><span class="sa">r</span><span class="s1">'\d'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">merge_final</span><span class="o">.</span><span class="n">Population_in_2020</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">pat</span><span class="o">=</span><span class="sa">r</span><span class="s1">'\d'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">merge_final</span><span class="o">.</span><span class="n">numero_anual_muertes</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">pat</span><span class="o">=</span><span class="sa">r</span><span class="s1">'\d'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Verificamos la aplicación de los códigos</span>
-<span class="n">merge_final</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#segundo filtro</span>
+<span class="n">OnlyPoblacion</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">poblacion</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">obesidad</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
+<span class="n">OnlyObesidad</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">obesidad</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">poblacion</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
+<span class="p">[(</span><span class="n">f</span><span class="p">,</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">OnlyPoblacion</span><span class="p">))</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">OnlyObesidad</span><span class="p">)]</span>
 </pre></div>
 
      </div>
@@ -15829,161 +15205,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Country</th>
-      <th>Officialstatename</th>
-      <th>InternetccTLD</th>
-      <th>iso2</th>
-      <th>iso3</th>
-      <th>Population_in_2020</th>
-      <th>Obesity_adult_prevalence_rate</th>
-      <th>numero_anual_muertes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AFGHANISTAN</td>
-      <td>The Islamic Republic of Afghanistan</td>
-      <td>.af</td>
-      <td>AF</td>
-      <td>AFG</td>
-      <td>38972236.0</td>
-      <td>2.2</td>
-      <td>62.57</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>ALBANIA</td>
-      <td>The Republic of Albania</td>
-      <td>.al</td>
-      <td>AL</td>
-      <td>ALB</td>
-      <td>2866850.0</td>
-      <td>21.3</td>
-      <td>29.59</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>ALGERIA</td>
-      <td>The People's Democratic Republic of Algeria</td>
-      <td>.dz</td>
-      <td>DZ</td>
-      <td>DZA</td>
-      <td>43451668.0</td>
-      <td>16.0</td>
-      <td>54.98</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>ANGOLA</td>
-      <td>The Republic of Angola</td>
-      <td>.ao</td>
-      <td>AO</td>
-      <td>AGO</td>
-      <td>33428490.0</td>
-      <td>6.4</td>
-      <td>73.83</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>ANTIGUA AND BARBUDA</td>
-      <td>Antigua and Barbuda</td>
-      <td>.ag</td>
-      <td>AG</td>
-      <td>ATG</td>
-      <td>92672.0</td>
-      <td>25.6</td>
-      <td>42.39</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>166</th>
-      <td>UZBEKISTAN</td>
-      <td>The Republic of Uzbekistan</td>
-      <td>.uz</td>
-      <td>UZ</td>
-      <td>UZB</td>
-      <td>33526662.0</td>
-      <td>15.1</td>
-      <td>37.22</td>
-    </tr>
-    <tr>
-      <th>167</th>
-      <td>VIET NAM</td>
-      <td>The Socialist Republic of Viet Nam</td>
-      <td>.vn</td>
-      <td>VN</td>
-      <td>VNM</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>168</th>
-      <td>YEMEN</td>
-      <td>The Republic of Yemen</td>
-      <td>.ye</td>
-      <td>YE</td>
-      <td>YEM</td>
-      <td>32284044.0</td>
-      <td>14.5</td>
-      <td>58.73</td>
-    </tr>
-    <tr>
-      <th>169</th>
-      <td>ZAMBIA</td>
-      <td>The Republic of Zambia</td>
-      <td>.zm</td>
-      <td>ZM</td>
-      <td>ZMB</td>
-      <td>18927716.0</td>
-      <td>3.6</td>
-      <td>54.65</td>
-    </tr>
-    <tr>
-      <th>170</th>
-      <td>ZIMBABWE</td>
-      <td>The Republic of Zimbabwe</td>
-      <td>.zw</td>
-      <td>ZW</td>
-      <td>ZWE</td>
-      <td>15669663.0</td>
-      <td>7.0</td>
-      <td>42.33</td>
-    </tr>
-  </tbody>
-</table>
-<p>171 rows × 8 columns</p>
-</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[(&#39;BURMA&#39;, (&#39;BERMUDA&#39;, 67)),
+ (&#39;CABO VERDE&#39;, (&#39;CAPE VERDE&#39;, 80)),
+ (&#39;CZECH REPUBLIC&#39;, (&#39;CZECHIA&#39;, 64)),
+ (&#39;MICRONESIA, FEDERATED STATES OF&#39;, (&#39;MICRONESIA (COUNTRY)&#39;, 86)),
+ (&#39;SWAZILAND&#39;, (&#39;TURKS AND CAICOS ISLANDS&#39;, 60)),
+ (&#39;TIMOR-LESTE&#39;, (&#39;EAST TIMOR&#39;, 82)),
+ (&#39;TOKELAU&#39;, (&#39;EUROPEAN UNION (27) (GCP)&#39;, 51))]</pre>
 </div>
 
 </div>
@@ -15992,7 +15222,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16000,195 +15230,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reemplazamos los valores en blanco, por guiones bajos</span>
-<span class="n">merge_final</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'Officialstatename'</span><span class="p">:</span> <span class="s1">'Official_State_Name'</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">merge_final</span><span class="p">[</span><span class="s1">'Official_State_Name'</span><span class="p">]</span><span class="o">=</span><span class="n">merge_final</span><span class="p">[</span><span class="s1">'Official_State_Name'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span><span class="s1">'_'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">merge_final</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">=</span><span class="n">merge_final</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span><span class="s1">'_'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1">#Revisamos nuestra data</span>
-<span class="n">merge_final</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">changeMerge2</span><span class="o">=</span><span class="p">{</span><span class="n">f</span><span class="p">:</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">OnlyPoblacion</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> 
+                 <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">OnlyObesidad</span><span class="p">)</span>
+                 <span class="k">if</span> <span class="mi">74</span><span class="o">&lt;=</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">OnlyPoblacion</span><span class="p">)[</span><span class="mi">1</span><span class="p">]}</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Country</th>
-      <th>Official_State_Name</th>
-      <th>InternetccTLD</th>
-      <th>iso2</th>
-      <th>iso3</th>
-      <th>Population_in_2020</th>
-      <th>Obesity_adult_prevalence_rate</th>
-      <th>numero_anual_muertes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AFGHANISTAN</td>
-      <td>The_Islamic_Republic_of_Afghanistan</td>
-      <td>.af</td>
-      <td>AF</td>
-      <td>AFG</td>
-      <td>38972236.0</td>
-      <td>2.2</td>
-      <td>62.57</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>ALBANIA</td>
-      <td>The_Republic_of_Albania</td>
-      <td>.al</td>
-      <td>AL</td>
-      <td>ALB</td>
-      <td>2866850.0</td>
-      <td>21.3</td>
-      <td>29.59</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>ALGERIA</td>
-      <td>The_People's_Democratic_Republic_of_Algeria</td>
-      <td>.dz</td>
-      <td>DZ</td>
-      <td>DZA</td>
-      <td>43451668.0</td>
-      <td>16.0</td>
-      <td>54.98</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>ANGOLA</td>
-      <td>The_Republic_of_Angola</td>
-      <td>.ao</td>
-      <td>AO</td>
-      <td>AGO</td>
-      <td>33428490.0</td>
-      <td>6.4</td>
-      <td>73.83</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>ANTIGUA_AND_BARBUDA</td>
-      <td>Antigua_and_Barbuda</td>
-      <td>.ag</td>
-      <td>AG</td>
-      <td>ATG</td>
-      <td>92672.0</td>
-      <td>25.6</td>
-      <td>42.39</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>166</th>
-      <td>UZBEKISTAN</td>
-      <td>The_Republic_of_Uzbekistan</td>
-      <td>.uz</td>
-      <td>UZ</td>
-      <td>UZB</td>
-      <td>33526662.0</td>
-      <td>15.1</td>
-      <td>37.22</td>
-    </tr>
-    <tr>
-      <th>167</th>
-      <td>VIET_NAM</td>
-      <td>The_Socialist_Republic_of_Viet_Nam</td>
-      <td>.vn</td>
-      <td>VN</td>
-      <td>VNM</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>168</th>
-      <td>YEMEN</td>
-      <td>The_Republic_of_Yemen</td>
-      <td>.ye</td>
-      <td>YE</td>
-      <td>YEM</td>
-      <td>32284044.0</td>
-      <td>14.5</td>
-      <td>58.73</td>
-    </tr>
-    <tr>
-      <th>169</th>
-      <td>ZAMBIA</td>
-      <td>The_Republic_of_Zambia</td>
-      <td>.zm</td>
-      <td>ZM</td>
-      <td>ZMB</td>
-      <td>18927716.0</td>
-      <td>3.6</td>
-      <td>54.65</td>
-    </tr>
-    <tr>
-      <th>170</th>
-      <td>ZIMBABWE</td>
-      <td>The_Republic_of_Zimbabwe</td>
-      <td>.zw</td>
-      <td>ZW</td>
-      <td>ZWE</td>
-      <td>15669663.0</td>
-      <td>7.0</td>
-      <td>42.33</td>
-    </tr>
-  </tbody>
-</table>
-<p>171 rows × 8 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -16199,11 +15248,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Eliminar espacios en blanco</span>
-<span class="n">merge_final</span><span class="o">=</span><span class="n">merge_final</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
-
-<span class="c1"># Finalmente, nuestro resultado final es el siguiente, considerando que los valores de NaN pasan a ser 0</span>
-<span class="n">merge_final</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">changeMerge2</span>
 </pre></div>
 
      </div>
@@ -16225,216 +15270,13 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Country</th>
-      <th>Official_State_Name</th>
-      <th>InternetccTLD</th>
-      <th>iso2</th>
-      <th>iso3</th>
-      <th>Population_in_2020</th>
-      <th>Obesity_adult_prevalence_rate</th>
-      <th>numero_anual_muertes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AFGHANISTAN</td>
-      <td>The_Islamic_Republic_of_Afghanistan</td>
-      <td>.af</td>
-      <td>AF</td>
-      <td>AFG</td>
-      <td>38972236.0</td>
-      <td>2.2</td>
-      <td>62.57</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>ALBANIA</td>
-      <td>The_Republic_of_Albania</td>
-      <td>.al</td>
-      <td>AL</td>
-      <td>ALB</td>
-      <td>2866850.0</td>
-      <td>21.3</td>
-      <td>29.59</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>ALGERIA</td>
-      <td>The_People's_Democratic_Republic_of_Algeria</td>
-      <td>.dz</td>
-      <td>DZ</td>
-      <td>DZA</td>
-      <td>43451668.0</td>
-      <td>16.0</td>
-      <td>54.98</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>ANGOLA</td>
-      <td>The_Republic_of_Angola</td>
-      <td>.ao</td>
-      <td>AO</td>
-      <td>AGO</td>
-      <td>33428490.0</td>
-      <td>6.4</td>
-      <td>73.83</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>ANTIGUA_AND_BARBUDA</td>
-      <td>Antigua_and_Barbuda</td>
-      <td>.ag</td>
-      <td>AG</td>
-      <td>ATG</td>
-      <td>92672.0</td>
-      <td>25.6</td>
-      <td>42.39</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>166</th>
-      <td>UZBEKISTAN</td>
-      <td>The_Republic_of_Uzbekistan</td>
-      <td>.uz</td>
-      <td>UZ</td>
-      <td>UZB</td>
-      <td>33526662.0</td>
-      <td>15.1</td>
-      <td>37.22</td>
-    </tr>
-    <tr>
-      <th>167</th>
-      <td>VIET_NAM</td>
-      <td>The_Socialist_Republic_of_Viet_Nam</td>
-      <td>.vn</td>
-      <td>VN</td>
-      <td>VNM</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>168</th>
-      <td>YEMEN</td>
-      <td>The_Republic_of_Yemen</td>
-      <td>.ye</td>
-      <td>YE</td>
-      <td>YEM</td>
-      <td>32284044.0</td>
-      <td>14.5</td>
-      <td>58.73</td>
-    </tr>
-    <tr>
-      <th>169</th>
-      <td>ZAMBIA</td>
-      <td>The_Republic_of_Zambia</td>
-      <td>.zm</td>
-      <td>ZM</td>
-      <td>ZMB</td>
-      <td>18927716.0</td>
-      <td>3.6</td>
-      <td>54.65</td>
-    </tr>
-    <tr>
-      <th>170</th>
-      <td>ZIMBABWE</td>
-      <td>The_Republic_of_Zimbabwe</td>
-      <td>.zw</td>
-      <td>ZW</td>
-      <td>ZWE</td>
-      <td>15669663.0</td>
-      <td>7.0</td>
-      <td>42.33</td>
-    </tr>
-  </tbody>
-</table>
-<p>171 rows × 8 columns</p>
-</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;CABO VERDE&#39;: &#39;CAPE VERDE&#39;,
+ &#39;MICRONESIA, FEDERATED STATES OF&#39;: &#39;MICRONESIA (COUNTRY)&#39;,
+ &#39;TIMOR-LESTE&#39;: &#39;EAST TIMOR&#39;}</pre>
 </div>
 
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">merge_final</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 171 entries, 0 to 170
-Data columns (total 8 columns):
- #   Column                         Non-Null Count  Dtype 
----  ------                         --------------  ----- 
- 0   Country                        171 non-null    object
- 1   Official_State_Name            171 non-null    object
- 2   InternetccTLD                  171 non-null    object
- 3   iso2                           171 non-null    object
- 4   iso3                           171 non-null    object
- 5   Population_in_2020             171 non-null    object
- 6   Obesity_adult_prevalence_rate  171 non-null    object
- 7   numero_anual_muertes           171 non-null    object
-dtypes: object(8)
-memory usage: 10.8+ KB
-</pre>
-</div>
 </div>
 
 </div>
@@ -16446,13 +15288,26 @@ memory usage: 10.8+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">obesidad</span><span class="o">.</span><span class="n">Country</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="n">changeMerge2</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Arreglando el Dtype de algunas columnas</span>
-<span class="n">merge_final</span><span class="p">[</span><span class="s1">'Population_in_2020'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final</span><span class="p">[</span><span class="s1">'Population_in_2020'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float64'</span><span class="p">)</span>
-<span class="n">merge_final</span><span class="p">[</span><span class="s1">'Obesity_adult_prevalence_rate'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final</span><span class="p">[</span><span class="s1">'Obesity_adult_prevalence_rate'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float64'</span><span class="p">)</span>
-<span class="n">merge_final</span><span class="p">[</span><span class="s1">'numero_anual_muertes'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final</span><span class="p">[</span><span class="s1">'numero_anual_muertes'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float64'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">########################## TERCER THEFUZZE ##################################################</span>
 </pre></div>
 
      </div>
@@ -16468,7 +15323,9 @@ memory usage: 10.8+ KB
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">merge_final</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">OnlyPoblacion</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">poblacion</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">obesidad</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
+<span class="n">OnlyObesidad</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">obesidad</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">poblacion</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
+<span class="p">[(</span><span class="n">f</span><span class="p">,</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">OnlyPoblacion</span><span class="p">))</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">OnlyObesidad</span><span class="p">)]</span>
 </pre></div>
 
      </div>
@@ -16486,31 +15343,40 @@ memory usage: 10.8+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 171 entries, 0 to 170
-Data columns (total 8 columns):
- #   Column                         Non-Null Count  Dtype  
----  ------                         --------------  -----  
- 0   Country                        171 non-null    object 
- 1   Official_State_Name            171 non-null    object 
- 2   InternetccTLD                  171 non-null    object 
- 3   iso2                           171 non-null    object 
- 4   iso3                           171 non-null    object 
- 5   Population_in_2020             171 non-null    float64
- 6   Obesity_adult_prevalence_rate  171 non-null    float64
- 7   numero_anual_muertes           171 non-null    float64
-dtypes: float64(3), object(5)
-memory usage: 10.8+ KB
-</pre>
-</div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[(&#39;BURMA&#39;, (&#39;BERMUDA&#39;, 67)),
+ (&#39;CZECH REPUBLIC&#39;, (&#39;CZECHIA&#39;, 64)),
+ (&#39;SWAZILAND&#39;, (&#39;TURKS AND CAICOS ISLANDS&#39;, 60)),
+ (&#39;TOKELAU&#39;, (&#39;EUROPEAN UNION (27) (GCP)&#39;, 51))]</pre>
 </div>
 
 </div>
 
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">changesMerge3</span><span class="o">=</span><span class="p">{</span><span class="n">f</span><span class="p">:</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">OnlyPoblacion</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> 
+                 <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">OnlyObesidad</span><span class="p">)</span>
+                 <span class="k">if</span> <span class="mi">54</span><span class="o">==</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">OnlyPoblacion</span><span class="p">)[</span><span class="mi">1</span><span class="p">]}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -16521,13 +15387,7 @@ memory usage: 10.8+ KB
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">merge_final_copia</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'Officialstatename'</span><span class="p">:</span> <span class="s1">'Official_State_Name'</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'Official_State_Name'</span><span class="p">]</span><span class="o">=</span><span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'Official_State_Name'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span><span class="s1">'_'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">=</span><span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span><span class="s1">'_'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'Population_in_2020'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'Population_in_2020'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float64'</span><span class="p">)</span>
-<span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'Obesity_adult_prevalence_rate'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'Obesity_adult_prevalence_rate'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float64'</span><span class="p">)</span>
-<span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'numero_anual_muertes'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'numero_anual_muertes'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float64'</span><span class="p">)</span>
-<span class="n">merge_final_copia</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">changesMerge3</span>
 </pre></div>
 
      </div>
@@ -16545,34 +15405,22 @@ memory usage: 10.8+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-Index: 138 entries, 0 to 170
-Data columns (total 8 columns):
- #   Column                         Non-Null Count  Dtype  
----  ------                         --------------  -----  
- 0   Country                        138 non-null    object 
- 1   Official_State_Name            138 non-null    object 
- 2   InternetccTLD                  138 non-null    object 
- 3   iso2                           138 non-null    object 
- 4   iso3                           138 non-null    object 
- 5   Population_in_2020             138 non-null    float64
- 6   Obesity_adult_prevalence_rate  138 non-null    float64
- 7   numero_anual_muertes           138 non-null    float64
-dtypes: float64(3), object(5)
-memory usage: 9.7+ KB
-</pre>
-</div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{}</pre>
 </div>
 
 </div>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16580,189 +15428,12 @@ memory usage: 9.7+ KB
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">merge_final_copia</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">obesidad</span><span class="o">.</span><span class="n">Country</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="n">changeMerge2</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Country</th>
-      <th>Official_State_Name</th>
-      <th>InternetccTLD</th>
-      <th>iso2</th>
-      <th>iso3</th>
-      <th>Population_in_2020</th>
-      <th>Obesity_adult_prevalence_rate</th>
-      <th>numero_anual_muertes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AFGHANISTAN</td>
-      <td>The_Islamic_Republic_of_Afghanistan</td>
-      <td>.af</td>
-      <td>AF</td>
-      <td>AFG</td>
-      <td>38972236.0</td>
-      <td>2.2</td>
-      <td>62.57</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>ALBANIA</td>
-      <td>The_Republic_of_Albania</td>
-      <td>.al</td>
-      <td>AL</td>
-      <td>ALB</td>
-      <td>2866850.0</td>
-      <td>21.3</td>
-      <td>29.59</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>ALGERIA</td>
-      <td>The_People's_Democratic_Republic_of_Algeria</td>
-      <td>.dz</td>
-      <td>DZ</td>
-      <td>DZA</td>
-      <td>43451668.0</td>
-      <td>16.0</td>
-      <td>54.98</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>ANGOLA</td>
-      <td>The_Republic_of_Angola</td>
-      <td>.ao</td>
-      <td>AO</td>
-      <td>AGO</td>
-      <td>33428490.0</td>
-      <td>6.4</td>
-      <td>73.83</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>ANTIGUA_AND_BARBUDA</td>
-      <td>Antigua_and_Barbuda</td>
-      <td>.ag</td>
-      <td>AG</td>
-      <td>ATG</td>
-      <td>92672.0</td>
-      <td>25.6</td>
-      <td>42.39</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>165</th>
-      <td>URUGUAY</td>
-      <td>The_Oriental_Republic_of_Uruguay</td>
-      <td>.uy</td>
-      <td>UY</td>
-      <td>URY</td>
-      <td>3429087.0</td>
-      <td>24.8</td>
-      <td>61.77</td>
-    </tr>
-    <tr>
-      <th>166</th>
-      <td>UZBEKISTAN</td>
-      <td>The_Republic_of_Uzbekistan</td>
-      <td>.uz</td>
-      <td>UZ</td>
-      <td>UZB</td>
-      <td>33526662.0</td>
-      <td>15.1</td>
-      <td>37.22</td>
-    </tr>
-    <tr>
-      <th>168</th>
-      <td>YEMEN</td>
-      <td>The_Republic_of_Yemen</td>
-      <td>.ye</td>
-      <td>YE</td>
-      <td>YEM</td>
-      <td>32284044.0</td>
-      <td>14.5</td>
-      <td>58.73</td>
-    </tr>
-    <tr>
-      <th>169</th>
-      <td>ZAMBIA</td>
-      <td>The_Republic_of_Zambia</td>
-      <td>.zm</td>
-      <td>ZM</td>
-      <td>ZMB</td>
-      <td>18927716.0</td>
-      <td>3.6</td>
-      <td>54.65</td>
-    </tr>
-    <tr>
-      <th>170</th>
-      <td>ZIMBABWE</td>
-      <td>The_Republic_of_Zimbabwe</td>
-      <td>.zw</td>
-      <td>ZW</td>
-      <td>ZWE</td>
-      <td>15669663.0</td>
-      <td>7.0</td>
-      <td>42.33</td>
-    </tr>
-  </tbody>
-</table>
-<p>138 rows × 8 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -16773,10 +15444,11 @@ memory usage: 9.7+ KB
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Se tienen dos resultados merge_final_copia y merge_final</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Realizaré el primer merge entre mi dos de mis datas</span>
+<span class="n">merge_data1</span><span class="o">=</span><span class="n">poblacion</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">obesidad</span><span class="p">,</span><span class="n">left_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">,</span><span class="n">right_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">)</span>
 
-<span class="c1"># Considerando eliminar los países que contenían NaN</span>
-<span class="n">merge_final_copia</span>
+<span class="c1"># Revisando el resultado del primer merge</span>
+<span class="n">merge_data1</span>
 </pre></div>
 
      </div>
@@ -16818,7 +15490,751 @@ memory usage: 9.7+ KB
     <tr style="text-align: right;">
       <th></th>
       <th>Country</th>
-      <th>Official_State_Name</th>
+      <th>Population_in_2020</th>
+      <th>Obesity_adult_prevalence_rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AFGHANISTAN</td>
+      <td>38972236.0</td>
+      <td>2.2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ALBANIA</td>
+      <td>2866850.0</td>
+      <td>21.3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ALGERIA</td>
+      <td>43451668.0</td>
+      <td>16.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>AMERICAN SAMOA</td>
+      <td>46216.0</td>
+      <td>74.6</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ANDORRA</td>
+      <td>77723.0</td>
+      <td>25.2</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>182</th>
+      <td>VENEZUELA</td>
+      <td>28490458.0</td>
+      <td>30.3</td>
+    </tr>
+    <tr>
+      <th>183</th>
+      <td>VIETNAM</td>
+      <td>96648680.0</td>
+      <td>1.7</td>
+    </tr>
+    <tr>
+      <th>184</th>
+      <td>YEMEN</td>
+      <td>32284044.0</td>
+      <td>14.5</td>
+    </tr>
+    <tr>
+      <th>185</th>
+      <td>ZAMBIA</td>
+      <td>18927716.0</td>
+      <td>3.6</td>
+    </tr>
+    <tr>
+      <th>186</th>
+      <td>ZIMBABWE</td>
+      <td>15669663.0</td>
+      <td>7.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>187 rows × 3 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">########################## THEFUZZE 1 ###########################</span>
+<span class="n">OnlyMergeData1</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">merge_data1</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">gripe</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
+<span class="n">OnlyGripe</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">merge_data1</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">gripe</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
+
+<span class="n">changeMergeDataP</span><span class="o">=</span><span class="p">{</span><span class="n">f</span><span class="p">:</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">OnlyMergeData1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> 
+                 <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">OnlyGripe</span><span class="p">)</span>
+                 <span class="k">if</span> <span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">OnlyMergeData1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span><span class="mi">90</span><span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">changeMergeDataP</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;AMERICAN SAMOA&#39;: &#39;AMERICAN SAMOA&#39;,
+ &#39;ANDORRA&#39;: &#39;ANDORRA&#39;,
+ &#39;COOK ISLANDS&#39;: &#39;COOK ISLANDS&#39;,
+ &#39;DOMINICA&#39;: &#39;DOMINICA&#39;,
+ &#39;MARSHALL ISLANDS&#39;: &#39;MARSHALL ISLANDS&#39;,
+ &#39;NAURU&#39;: &#39;NAURU&#39;,
+ &#39;PALAU&#39;: &#39;PALAU&#39;,
+ &#39;SAINT KITTS AND NEVIS&#39;: &#39;SAINT KITTS AND NEVIS&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gripe</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="n">changeMergeDataP</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">################## SEGUNDO THEFUZZE ########################</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">OnlyMergeData1</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">merge_data1</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">gripe</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
+<span class="n">OnlyGripe</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">merge_data1</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">gripe</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
+<span class="p">[(</span><span class="n">f</span><span class="p">,</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">OnlyMergeData1</span><span class="p">))</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">OnlyGripe</span><span class="p">)]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[(&#39;AMERICAN SAMOA&#39;, (&#39;AMERICAN SAMOA&#39;, 100)),
+ (&#39;ANDORRA&#39;, (&#39;ANDORRA&#39;, 100)),
+ (&#39;COOK ISLANDS&#39;, (&#39;COOK ISLANDS&#39;, 100)),
+ (&#39;DOMINICA&#39;, (&#39;DOMINICA&#39;, 100)),
+ (&#39;MARSHALL ISLANDS&#39;, (&#39;MARSHALL ISLANDS&#39;, 100)),
+ (&#39;NAURU&#39;, (&#39;NAURU&#39;, 100)),
+ (&#39;PALAU&#39;, (&#39;PALAU&#39;, 100)),
+ (&#39;SAINT KITTS AND NEVIS&#39;, (&#39;SAINT KITTS AND NEVIS&#39;, 100))]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">changeMergeDataP2</span><span class="o">=</span><span class="p">{</span><span class="n">f</span><span class="p">:</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">OnlyMergeData1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> 
+                 <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">OnlyGripe</span><span class="p">)</span>
+                 <span class="k">if</span> <span class="mi">74</span><span class="o">&lt;=</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">OnlyMergeData1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">changeMerge2</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;CABO VERDE&#39;: &#39;CAPE VERDE&#39;,
+ &#39;MICRONESIA, FEDERATED STATES OF&#39;: &#39;MICRONESIA (COUNTRY)&#39;,
+ &#39;TIMOR-LESTE&#39;: &#39;EAST TIMOR&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gripe</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="n">changeMergeDataP2</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Como las datas que debo hacer son cuatro, debo realizar un nuevo merge, esta vez entre otra de mis datas</span>
+<span class="c1"># y el realizado anteriormente</span>
+<span class="n">merge_data2</span><span class="o">=</span><span class="n">merge_data1</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">gripe</span><span class="p">,</span><span class="n">left_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">,</span><span class="n">right_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">)</span>
+
+<span class="c1">#revisando el resultado de este segundo merge</span>
+<span class="n">merge_data2</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[31]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>Population_in_2020</th>
+      <th>Obesity_adult_prevalence_rate</th>
+      <th>numero_anual_muertes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AFGHANISTAN</td>
+      <td>38972236.0</td>
+      <td>2.2</td>
+      <td>62.57</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ALBANIA</td>
+      <td>2866850.0</td>
+      <td>21.3</td>
+      <td>29.59</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ALGERIA</td>
+      <td>43451668.0</td>
+      <td>16.0</td>
+      <td>54.98</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ANGOLA</td>
+      <td>33428490.0</td>
+      <td>6.4</td>
+      <td>73.83</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ANTIGUA AND BARBUDA</td>
+      <td>92672.0</td>
+      <td>25.6</td>
+      <td>42.39</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>174</th>
+      <td>VENEZUELA</td>
+      <td>28490458.0</td>
+      <td>30.3</td>
+      <td>55.91</td>
+    </tr>
+    <tr>
+      <th>175</th>
+      <td>VIETNAM</td>
+      <td>96648680.0</td>
+      <td>1.7</td>
+      <td>37.39</td>
+    </tr>
+    <tr>
+      <th>176</th>
+      <td>YEMEN</td>
+      <td>32284044.0</td>
+      <td>14.5</td>
+      <td>58.73</td>
+    </tr>
+    <tr>
+      <th>177</th>
+      <td>ZAMBIA</td>
+      <td>18927716.0</td>
+      <td>3.6</td>
+      <td>54.65</td>
+    </tr>
+    <tr>
+      <th>178</th>
+      <td>ZIMBABWE</td>
+      <td>15669663.0</td>
+      <td>7.0</td>
+      <td>42.33</td>
+    </tr>
+  </tbody>
+</table>
+<p>179 rows × 4 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">######## PRIMER THEFUZZE ###########################</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Viendo las diferencias</span>
+<span class="n">OnlyMergeData2</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">merge_data2</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">country_isos</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
+<span class="n">OnlyIsos</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">country_isos</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">merge_data2</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
+
+<span class="n">changeMergeDataFinal</span><span class="o">=</span><span class="p">{</span><span class="n">f</span><span class="p">:</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">OnlyMergeData2</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> 
+                 <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">OnlyIsos</span><span class="p">)</span>
+                 <span class="k">if</span> <span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">OnlyMergeData2</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span><span class="mi">90</span><span class="p">}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">changeMergeDataFinal</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;BAHAMAS (THE)&#39;: &#39;BAHAMAS&#39;,
+ &#39;BOLIVIA (PLURINATIONAL STATE OF)&#39;: &#39;BOLIVIA&#39;,
+ &#39;BRUNEI DARUSSALAM&#39;: &#39;BRUNEI&#39;,
+ &#39;CENTRAL AFRICAN REPUBLIC (THE)&#39;: &#39;CENTRAL AFRICAN REPUBLIC&#39;,
+ &#39;COMOROS (THE)&#39;: &#39;COMOROS&#39;,
+ &#39;CONGO (THE DEMOCRATIC REPUBLIC OF THE)&#39;: &#39;DEMOCRATIC REPUBLIC OF CONGO&#39;,
+ &#39;CONGO (THE)&#39;: &#39;CONGO&#39;,
+ &#34;C√îTE D&#39;IVOIRE&#34;: &#34;COTE D&#39;IVOIRE&#34;,
+ &#39;DOMINICAN REPUBLIC (THE)&#39;: &#39;DOMINICAN REPUBLIC&#39;,
+ &#39;GAMBIA (THE)&#39;: &#39;GAMBIA&#39;,
+ &#39;IRAN (ISLAMIC REPUBLIC OF)&#39;: &#39;IRAN&#39;,
+ &#39;MOLDOVA (THE REPUBLIC OF)&#39;: &#39;MOLDOVA&#39;,
+ &#39;NETHERLANDS (THE)&#39;: &#39;NETHERLANDS&#39;,
+ &#39;NIGER (THE)&#39;: &#39;NIGER&#39;,
+ &#39;PHILIPPINES (THE)&#39;: &#39;PHILIPPINES&#39;,
+ &#39;RUSSIAN FEDERATION (THE)&#39;: &#39;RUSSIA&#39;,
+ &#39;SOUTH SUDAN&#39;: &#39;SUDAN&#39;,
+ &#39;SUDAN (THE)&#39;: &#39;SUDAN&#39;,
+ &#39;TANZANIA, THE UNITED REPUBLIC OF&#39;: &#39;TANZANIA&#39;,
+ &#39;UNITED ARAB EMIRATES (THE)&#39;: &#39;UNITED ARAB EMIRATES&#39;,
+ &#39;UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND (THE)&#39;: &#39;UNITED KINGDOM&#39;,
+ &#39;UNITED STATES MINOR OUTLYING ISLANDS (THE)&#39;: &#39;UNITED STATES&#39;,
+ &#39;VIET NAM&#39;: &#39;VIETNAM&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_isos</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="n">changeMergeDataFinal</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">####### SEGUNDO THEFUZZE #####</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">OnlyMergeData2</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">merge_data2</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">country_isos</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
+<span class="n">OnlyIsos</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">country_isos</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">merge_data2</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">changeMergeDataFinal2</span><span class="o">=</span><span class="p">{</span><span class="n">f</span><span class="p">:</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">OnlyMergeData2</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> 
+                 <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">OnlyIsos</span><span class="p">)</span>
+                 <span class="k">if</span> <span class="mi">74</span><span class="o">&lt;=</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">OnlyMergeData2</span><span class="p">)[</span><span class="mi">1</span><span class="p">]}</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">changeMergeDataFinal2</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;CABO VERDE&#39;: &#39;CAPE VERDE&#39;,
+ &#39;KOREA (THE REPUBLIC OF)&#39;: &#39;SOUTH KOREA&#39;,
+ &#39;MICRONESIA (FEDERATED STATES OF)&#39;: &#39;MICRONESIA (COUNTRY)&#39;,
+ &#39;TIMOR-LESTE&#39;: &#39;EAST TIMOR&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_isos</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="n">changeMergeDataFinal2</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Finalmente, tenemos el merge del resultado de la unión de mis propias datas con las brindadas por el profesor </span>
+<span class="n">merge_final</span><span class="o">=</span><span class="n">country_isos</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">merge_data2</span><span class="p">,</span><span class="n">left_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">,</span><span class="n">right_on</span><span class="o">=</span><span class="s1">'Country'</span><span class="p">)</span>
+
+<span class="c1"># Revisando nuestro resultado, tenemos</span>
+<span class="n">merge_final</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>Officialstatename</th>
       <th>InternetccTLD</th>
       <th>iso2</th>
       <th>iso3</th>
@@ -16831,7 +16247,7 @@ memory usage: 9.7+ KB
     <tr>
       <th>0</th>
       <td>AFGHANISTAN</td>
-      <td>The_Islamic_Republic_of_Afghanistan</td>
+      <td>The Islamic Republic of Afghanistan</td>
       <td>.af</td>
       <td>AF</td>
       <td>AFG</td>
@@ -16842,7 +16258,7 @@ memory usage: 9.7+ KB
     <tr>
       <th>1</th>
       <td>ALBANIA</td>
-      <td>The_Republic_of_Albania</td>
+      <td>The Republic of Albania</td>
       <td>.al</td>
       <td>AL</td>
       <td>ALB</td>
@@ -16853,7 +16269,7 @@ memory usage: 9.7+ KB
     <tr>
       <th>2</th>
       <td>ALGERIA</td>
-      <td>The_People's_Democratic_Republic_of_Algeria</td>
+      <td>The People's Democratic Republic of Algeria</td>
       <td>.dz</td>
       <td>DZ</td>
       <td>DZA</td>
@@ -16864,7 +16280,7 @@ memory usage: 9.7+ KB
     <tr>
       <th>3</th>
       <td>ANGOLA</td>
-      <td>The_Republic_of_Angola</td>
+      <td>The Republic of Angola</td>
       <td>.ao</td>
       <td>AO</td>
       <td>AGO</td>
@@ -16874,8 +16290,8 @@ memory usage: 9.7+ KB
     </tr>
     <tr>
       <th>4</th>
-      <td>ANTIGUA_AND_BARBUDA</td>
-      <td>Antigua_and_Barbuda</td>
+      <td>ANTIGUA AND BARBUDA</td>
+      <td>Antigua and Barbuda</td>
       <td>.ag</td>
       <td>AG</td>
       <td>ATG</td>
@@ -16895,20 +16311,9 @@ memory usage: 9.7+ KB
       <td>...</td>
     </tr>
     <tr>
-      <th>165</th>
-      <td>URUGUAY</td>
-      <td>The_Oriental_Republic_of_Uruguay</td>
-      <td>.uy</td>
-      <td>UY</td>
-      <td>URY</td>
-      <td>3429087.0</td>
-      <td>24.8</td>
-      <td>61.77</td>
-    </tr>
-    <tr>
-      <th>166</th>
+      <th>162</th>
       <td>UZBEKISTAN</td>
-      <td>The_Republic_of_Uzbekistan</td>
+      <td>The Republic of Uzbekistan</td>
       <td>.uz</td>
       <td>UZ</td>
       <td>UZB</td>
@@ -16917,9 +16322,20 @@ memory usage: 9.7+ KB
       <td>37.22</td>
     </tr>
     <tr>
-      <th>168</th>
+      <th>163</th>
+      <td>VIETNAM</td>
+      <td>The Socialist Republic of Viet Nam</td>
+      <td>.vn</td>
+      <td>VN</td>
+      <td>VNM</td>
+      <td>96648680.0</td>
+      <td>1.7</td>
+      <td>37.39</td>
+    </tr>
+    <tr>
+      <th>164</th>
       <td>YEMEN</td>
-      <td>The_Republic_of_Yemen</td>
+      <td>The Republic of Yemen</td>
       <td>.ye</td>
       <td>YE</td>
       <td>YEM</td>
@@ -16928,9 +16344,9 @@ memory usage: 9.7+ KB
       <td>58.73</td>
     </tr>
     <tr>
-      <th>169</th>
+      <th>165</th>
       <td>ZAMBIA</td>
-      <td>The_Republic_of_Zambia</td>
+      <td>The Republic of Zambia</td>
       <td>.zm</td>
       <td>ZM</td>
       <td>ZMB</td>
@@ -16939,9 +16355,9 @@ memory usage: 9.7+ KB
       <td>54.65</td>
     </tr>
     <tr>
-      <th>170</th>
+      <th>166</th>
       <td>ZIMBABWE</td>
-      <td>The_Republic_of_Zimbabwe</td>
+      <td>The Republic of Zimbabwe</td>
       <td>.zw</td>
       <td>ZW</td>
       <td>ZWE</td>
@@ -16951,7 +16367,7 @@ memory usage: 9.7+ KB
     </tr>
   </tbody>
 </table>
-<p>138 rows × 8 columns</p>
+<p>167 rows × 8 columns</p>
 </div>
 </div>
 
@@ -16959,6 +16375,29 @@ memory usage: 9.7+ KB
 
 </div>
 
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#creamos una copia para realizar una vista de lo que serían la data si eliminamos los países que contienen NaN en alguna</span>
+<span class="c1"># de sus celdas</span>
+<span class="n">merge_final_copia</span> <span class="o">=</span> <span class="n">merge_final</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">filas_con_nan</span> <span class="o">=</span> <span class="n">merge_final_copia</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">filas_con_nan</span> <span class="o">=</span> <span class="n">merge_final_copia</span><span class="p">[</span><span class="n">filas_con_nan</span><span class="p">]</span>
+
+<span class="n">filas_con_nan</span>
+<span class="n">merge_final_copia</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'any'</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -16966,10 +16405,16 @@ memory usage: 9.7+ KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># considerando el valor de NaN como 0</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ahora, con toda mi data, puedo realizar la limpieza final</span>
+
+<span class="c1"># Quiero asegurarme que los datos en mi columnas sean de un tipo de valor coherente (Números)</span>
+<span class="c1"># por lo que es necesario deshacerme de valores como NaN, que pueden ser un obstáculo en la aplicación de mi nueva data</span>
+<span class="n">merge_final</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+
+<span class="c1"># Revisando el merge final</span>
 <span class="n">merge_final</span>
 </pre></div>
 
@@ -16988,7 +16433,410 @@ memory usage: 9.7+ KB
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>Officialstatename</th>
+      <th>InternetccTLD</th>
+      <th>iso2</th>
+      <th>iso3</th>
+      <th>Population_in_2020</th>
+      <th>Obesity_adult_prevalence_rate</th>
+      <th>numero_anual_muertes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AFGHANISTAN</td>
+      <td>The Islamic Republic of Afghanistan</td>
+      <td>.af</td>
+      <td>AF</td>
+      <td>AFG</td>
+      <td>38972236.0</td>
+      <td>2.2</td>
+      <td>62.57</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ALBANIA</td>
+      <td>The Republic of Albania</td>
+      <td>.al</td>
+      <td>AL</td>
+      <td>ALB</td>
+      <td>2866850.0</td>
+      <td>21.3</td>
+      <td>29.59</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ALGERIA</td>
+      <td>The People's Democratic Republic of Algeria</td>
+      <td>.dz</td>
+      <td>DZ</td>
+      <td>DZA</td>
+      <td>43451668.0</td>
+      <td>16.0</td>
+      <td>54.98</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ANGOLA</td>
+      <td>The Republic of Angola</td>
+      <td>.ao</td>
+      <td>AO</td>
+      <td>AGO</td>
+      <td>33428490.0</td>
+      <td>6.4</td>
+      <td>73.83</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ANTIGUA AND BARBUDA</td>
+      <td>Antigua and Barbuda</td>
+      <td>.ag</td>
+      <td>AG</td>
+      <td>ATG</td>
+      <td>92672.0</td>
+      <td>25.6</td>
+      <td>42.39</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>UZBEKISTAN</td>
+      <td>The Republic of Uzbekistan</td>
+      <td>.uz</td>
+      <td>UZ</td>
+      <td>UZB</td>
+      <td>33526662.0</td>
+      <td>15.1</td>
+      <td>37.22</td>
+    </tr>
+    <tr>
+      <th>163</th>
+      <td>VIETNAM</td>
+      <td>The Socialist Republic of Viet Nam</td>
+      <td>.vn</td>
+      <td>VN</td>
+      <td>VNM</td>
+      <td>96648680.0</td>
+      <td>1.7</td>
+      <td>37.39</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>YEMEN</td>
+      <td>The Republic of Yemen</td>
+      <td>.ye</td>
+      <td>YE</td>
+      <td>YEM</td>
+      <td>32284044.0</td>
+      <td>14.5</td>
+      <td>58.73</td>
+    </tr>
+    <tr>
+      <th>165</th>
+      <td>ZAMBIA</td>
+      <td>The Republic of Zambia</td>
+      <td>.zm</td>
+      <td>ZM</td>
+      <td>ZMB</td>
+      <td>18927716.0</td>
+      <td>3.6</td>
+      <td>54.65</td>
+    </tr>
+    <tr>
+      <th>166</th>
+      <td>ZIMBABWE</td>
+      <td>The Republic of Zimbabwe</td>
+      <td>.zw</td>
+      <td>ZW</td>
+      <td>ZWE</td>
+      <td>15669663.0</td>
+      <td>7.0</td>
+      <td>42.33</td>
+    </tr>
+  </tbody>
+</table>
+<p>167 rows × 8 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Cambiando el tipo de dato de las celdas de las columnas de mi data</span>
+<span class="n">merge_final</span><span class="p">[</span><span class="s1">'Obesity_adult_prevalence_rate'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final</span><span class="p">[</span><span class="s1">'Obesity_adult_prevalence_rate'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">merge_final</span><span class="p">[</span><span class="s1">'Population_in_2020'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final</span><span class="p">[</span><span class="s1">'Population_in_2020'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">merge_final</span><span class="p">[</span><span class="s1">'numero_anual_muertes'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final</span><span class="p">[</span><span class="s1">'numero_anual_muertes'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+
+<span class="c1"># Nos aseguramos de eliminar los espacios en blanco</span>
+<span class="n">merge_final</span><span class="o">.</span><span class="n">Obesity_adult_prevalence_rate</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">pat</span><span class="o">=</span><span class="sa">r</span><span class="s1">'\d'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">merge_final</span><span class="o">.</span><span class="n">Population_in_2020</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">pat</span><span class="o">=</span><span class="sa">r</span><span class="s1">'\d'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">merge_final</span><span class="o">.</span><span class="n">numero_anual_muertes</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">pat</span><span class="o">=</span><span class="sa">r</span><span class="s1">'\d'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Verificamos la aplicación de los códigos</span>
+<span class="n">merge_final</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>Officialstatename</th>
+      <th>InternetccTLD</th>
+      <th>iso2</th>
+      <th>iso3</th>
+      <th>Population_in_2020</th>
+      <th>Obesity_adult_prevalence_rate</th>
+      <th>numero_anual_muertes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AFGHANISTAN</td>
+      <td>The Islamic Republic of Afghanistan</td>
+      <td>.af</td>
+      <td>AF</td>
+      <td>AFG</td>
+      <td>38972236.0</td>
+      <td>2.2</td>
+      <td>62.57</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ALBANIA</td>
+      <td>The Republic of Albania</td>
+      <td>.al</td>
+      <td>AL</td>
+      <td>ALB</td>
+      <td>2866850.0</td>
+      <td>21.3</td>
+      <td>29.59</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ALGERIA</td>
+      <td>The People's Democratic Republic of Algeria</td>
+      <td>.dz</td>
+      <td>DZ</td>
+      <td>DZA</td>
+      <td>43451668.0</td>
+      <td>16.0</td>
+      <td>54.98</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ANGOLA</td>
+      <td>The Republic of Angola</td>
+      <td>.ao</td>
+      <td>AO</td>
+      <td>AGO</td>
+      <td>33428490.0</td>
+      <td>6.4</td>
+      <td>73.83</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ANTIGUA AND BARBUDA</td>
+      <td>Antigua and Barbuda</td>
+      <td>.ag</td>
+      <td>AG</td>
+      <td>ATG</td>
+      <td>92672.0</td>
+      <td>25.6</td>
+      <td>42.39</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>UZBEKISTAN</td>
+      <td>The Republic of Uzbekistan</td>
+      <td>.uz</td>
+      <td>UZ</td>
+      <td>UZB</td>
+      <td>33526662.0</td>
+      <td>15.1</td>
+      <td>37.22</td>
+    </tr>
+    <tr>
+      <th>163</th>
+      <td>VIETNAM</td>
+      <td>The Socialist Republic of Viet Nam</td>
+      <td>.vn</td>
+      <td>VN</td>
+      <td>VNM</td>
+      <td>96648680.0</td>
+      <td>1.7</td>
+      <td>37.39</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>YEMEN</td>
+      <td>The Republic of Yemen</td>
+      <td>.ye</td>
+      <td>YE</td>
+      <td>YEM</td>
+      <td>32284044.0</td>
+      <td>14.5</td>
+      <td>58.73</td>
+    </tr>
+    <tr>
+      <th>165</th>
+      <td>ZAMBIA</td>
+      <td>The Republic of Zambia</td>
+      <td>.zm</td>
+      <td>ZM</td>
+      <td>ZMB</td>
+      <td>18927716.0</td>
+      <td>3.6</td>
+      <td>54.65</td>
+    </tr>
+    <tr>
+      <th>166</th>
+      <td>ZIMBABWE</td>
+      <td>The Republic of Zimbabwe</td>
+      <td>.zw</td>
+      <td>ZW</td>
+      <td>ZWE</td>
+      <td>15669663.0</td>
+      <td>7.0</td>
+      <td>42.33</td>
+    </tr>
+  </tbody>
+</table>
+<p>167 rows × 8 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reemplazamos los valores en blanco, por guiones bajos</span>
+<span class="n">merge_final</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'Officialstatename'</span><span class="p">:</span> <span class="s1">'Official_State_Name'</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">merge_final</span><span class="p">[</span><span class="s1">'Official_State_Name'</span><span class="p">]</span><span class="o">=</span><span class="n">merge_final</span><span class="p">[</span><span class="s1">'Official_State_Name'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span><span class="s1">'_'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">merge_final</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">=</span><span class="n">merge_final</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span><span class="s1">'_'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1">#Revisamos nuestra data</span>
+<span class="n">merge_final</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[45]:</div>
 
 
 
@@ -17089,7 +16937,7 @@ memory usage: 9.7+ KB
       <td>...</td>
     </tr>
     <tr>
-      <th>166</th>
+      <th>162</th>
       <td>UZBEKISTAN</td>
       <td>The_Republic_of_Uzbekistan</td>
       <td>.uz</td>
@@ -17100,18 +16948,18 @@ memory usage: 9.7+ KB
       <td>37.22</td>
     </tr>
     <tr>
-      <th>167</th>
-      <td>VIET_NAM</td>
+      <th>163</th>
+      <td>VIETNAM</td>
       <td>The_Socialist_Republic_of_Viet_Nam</td>
       <td>.vn</td>
       <td>VN</td>
       <td>VNM</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.00</td>
+      <td>96648680.0</td>
+      <td>1.7</td>
+      <td>37.39</td>
     </tr>
     <tr>
-      <th>168</th>
+      <th>164</th>
       <td>YEMEN</td>
       <td>The_Republic_of_Yemen</td>
       <td>.ye</td>
@@ -17122,7 +16970,7 @@ memory usage: 9.7+ KB
       <td>58.73</td>
     </tr>
     <tr>
-      <th>169</th>
+      <th>165</th>
       <td>ZAMBIA</td>
       <td>The_Republic_of_Zambia</td>
       <td>.zm</td>
@@ -17133,7 +16981,7 @@ memory usage: 9.7+ KB
       <td>54.65</td>
     </tr>
     <tr>
-      <th>170</th>
+      <th>166</th>
       <td>ZIMBABWE</td>
       <td>The_Republic_of_Zimbabwe</td>
       <td>.zw</td>
@@ -17145,7 +16993,1180 @@ memory usage: 9.7+ KB
     </tr>
   </tbody>
 </table>
-<p>171 rows × 8 columns</p>
+<p>167 rows × 8 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Eliminar espacios en blanco</span>
+<span class="n">merge_final</span><span class="o">=</span><span class="n">merge_final</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+
+<span class="c1"># Finalmente, nuestro resultado final es el siguiente, considerando que los valores de NaN pasan a ser 0</span>
+<span class="n">merge_final</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>Official_State_Name</th>
+      <th>InternetccTLD</th>
+      <th>iso2</th>
+      <th>iso3</th>
+      <th>Population_in_2020</th>
+      <th>Obesity_adult_prevalence_rate</th>
+      <th>numero_anual_muertes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AFGHANISTAN</td>
+      <td>The_Islamic_Republic_of_Afghanistan</td>
+      <td>.af</td>
+      <td>AF</td>
+      <td>AFG</td>
+      <td>38972236.0</td>
+      <td>2.2</td>
+      <td>62.57</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ALBANIA</td>
+      <td>The_Republic_of_Albania</td>
+      <td>.al</td>
+      <td>AL</td>
+      <td>ALB</td>
+      <td>2866850.0</td>
+      <td>21.3</td>
+      <td>29.59</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ALGERIA</td>
+      <td>The_People's_Democratic_Republic_of_Algeria</td>
+      <td>.dz</td>
+      <td>DZ</td>
+      <td>DZA</td>
+      <td>43451668.0</td>
+      <td>16.0</td>
+      <td>54.98</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ANGOLA</td>
+      <td>The_Republic_of_Angola</td>
+      <td>.ao</td>
+      <td>AO</td>
+      <td>AGO</td>
+      <td>33428490.0</td>
+      <td>6.4</td>
+      <td>73.83</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ANTIGUA_AND_BARBUDA</td>
+      <td>Antigua_and_Barbuda</td>
+      <td>.ag</td>
+      <td>AG</td>
+      <td>ATG</td>
+      <td>92672.0</td>
+      <td>25.6</td>
+      <td>42.39</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>UZBEKISTAN</td>
+      <td>The_Republic_of_Uzbekistan</td>
+      <td>.uz</td>
+      <td>UZ</td>
+      <td>UZB</td>
+      <td>33526662.0</td>
+      <td>15.1</td>
+      <td>37.22</td>
+    </tr>
+    <tr>
+      <th>163</th>
+      <td>VIETNAM</td>
+      <td>The_Socialist_Republic_of_Viet_Nam</td>
+      <td>.vn</td>
+      <td>VN</td>
+      <td>VNM</td>
+      <td>96648680.0</td>
+      <td>1.7</td>
+      <td>37.39</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>YEMEN</td>
+      <td>The_Republic_of_Yemen</td>
+      <td>.ye</td>
+      <td>YE</td>
+      <td>YEM</td>
+      <td>32284044.0</td>
+      <td>14.5</td>
+      <td>58.73</td>
+    </tr>
+    <tr>
+      <th>165</th>
+      <td>ZAMBIA</td>
+      <td>The_Republic_of_Zambia</td>
+      <td>.zm</td>
+      <td>ZM</td>
+      <td>ZMB</td>
+      <td>18927716.0</td>
+      <td>3.6</td>
+      <td>54.65</td>
+    </tr>
+    <tr>
+      <th>166</th>
+      <td>ZIMBABWE</td>
+      <td>The_Republic_of_Zimbabwe</td>
+      <td>.zw</td>
+      <td>ZW</td>
+      <td>ZWE</td>
+      <td>15669663.0</td>
+      <td>7.0</td>
+      <td>42.33</td>
+    </tr>
+  </tbody>
+</table>
+<p>167 rows × 8 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">merge_final</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 167 entries, 0 to 166
+Data columns (total 8 columns):
+ #   Column                         Non-Null Count  Dtype 
+---  ------                         --------------  ----- 
+ 0   Country                        167 non-null    object
+ 1   Official_State_Name            167 non-null    object
+ 2   InternetccTLD                  167 non-null    object
+ 3   iso2                           167 non-null    object
+ 4   iso3                           167 non-null    object
+ 5   Population_in_2020             167 non-null    object
+ 6   Obesity_adult_prevalence_rate  167 non-null    object
+ 7   numero_anual_muertes           167 non-null    object
+dtypes: object(8)
+memory usage: 10.6+ KB
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Arreglando el Dtype de algunas columnas</span>
+<span class="n">merge_final</span><span class="p">[</span><span class="s1">'Population_in_2020'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final</span><span class="p">[</span><span class="s1">'Population_in_2020'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float64'</span><span class="p">)</span>
+<span class="n">merge_final</span><span class="p">[</span><span class="s1">'Obesity_adult_prevalence_rate'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final</span><span class="p">[</span><span class="s1">'Obesity_adult_prevalence_rate'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float64'</span><span class="p">)</span>
+<span class="n">merge_final</span><span class="p">[</span><span class="s1">'numero_anual_muertes'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final</span><span class="p">[</span><span class="s1">'numero_anual_muertes'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float64'</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">merge_final</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 167 entries, 0 to 166
+Data columns (total 8 columns):
+ #   Column                         Non-Null Count  Dtype  
+---  ------                         --------------  -----  
+ 0   Country                        167 non-null    object 
+ 1   Official_State_Name            167 non-null    object 
+ 2   InternetccTLD                  167 non-null    object 
+ 3   iso2                           167 non-null    object 
+ 4   iso3                           167 non-null    object 
+ 5   Population_in_2020             167 non-null    float64
+ 6   Obesity_adult_prevalence_rate  167 non-null    float64
+ 7   numero_anual_muertes           167 non-null    float64
+dtypes: float64(3), object(5)
+memory usage: 10.6+ KB
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">merge_final_copia</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'Officialstatename'</span><span class="p">:</span> <span class="s1">'Official_State_Name'</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'Official_State_Name'</span><span class="p">]</span><span class="o">=</span><span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'Official_State_Name'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span><span class="s1">'_'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">=</span><span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'Country'</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span><span class="s1">'_'</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'Population_in_2020'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'Population_in_2020'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float64'</span><span class="p">)</span>
+<span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'Obesity_adult_prevalence_rate'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'Obesity_adult_prevalence_rate'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float64'</span><span class="p">)</span>
+<span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'numero_anual_muertes'</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_final_copia</span><span class="p">[</span><span class="s1">'numero_anual_muertes'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float64'</span><span class="p">)</span>
+<span class="n">merge_final_copia</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Index: 165 entries, 0 to 166
+Data columns (total 8 columns):
+ #   Column                         Non-Null Count  Dtype  
+---  ------                         --------------  -----  
+ 0   Country                        165 non-null    object 
+ 1   Official_State_Name            165 non-null    object 
+ 2   InternetccTLD                  165 non-null    object 
+ 3   iso2                           165 non-null    object 
+ 4   iso3                           165 non-null    object 
+ 5   Population_in_2020             165 non-null    float64
+ 6   Obesity_adult_prevalence_rate  165 non-null    float64
+ 7   numero_anual_muertes           165 non-null    float64
+dtypes: float64(3), object(5)
+memory usage: 11.6+ KB
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">merge_final_copia</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>Official_State_Name</th>
+      <th>InternetccTLD</th>
+      <th>iso2</th>
+      <th>iso3</th>
+      <th>Population_in_2020</th>
+      <th>Obesity_adult_prevalence_rate</th>
+      <th>numero_anual_muertes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AFGHANISTAN</td>
+      <td>The_Islamic_Republic_of_Afghanistan</td>
+      <td>.af</td>
+      <td>AF</td>
+      <td>AFG</td>
+      <td>38972236.0</td>
+      <td>2.2</td>
+      <td>62.57</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ALBANIA</td>
+      <td>The_Republic_of_Albania</td>
+      <td>.al</td>
+      <td>AL</td>
+      <td>ALB</td>
+      <td>2866850.0</td>
+      <td>21.3</td>
+      <td>29.59</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ALGERIA</td>
+      <td>The_People's_Democratic_Republic_of_Algeria</td>
+      <td>.dz</td>
+      <td>DZ</td>
+      <td>DZA</td>
+      <td>43451668.0</td>
+      <td>16.0</td>
+      <td>54.98</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ANGOLA</td>
+      <td>The_Republic_of_Angola</td>
+      <td>.ao</td>
+      <td>AO</td>
+      <td>AGO</td>
+      <td>33428490.0</td>
+      <td>6.4</td>
+      <td>73.83</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ANTIGUA_AND_BARBUDA</td>
+      <td>Antigua_and_Barbuda</td>
+      <td>.ag</td>
+      <td>AG</td>
+      <td>ATG</td>
+      <td>92672.0</td>
+      <td>25.6</td>
+      <td>42.39</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>UZBEKISTAN</td>
+      <td>The_Republic_of_Uzbekistan</td>
+      <td>.uz</td>
+      <td>UZ</td>
+      <td>UZB</td>
+      <td>33526662.0</td>
+      <td>15.1</td>
+      <td>37.22</td>
+    </tr>
+    <tr>
+      <th>163</th>
+      <td>VIETNAM</td>
+      <td>The_Socialist_Republic_of_Viet_Nam</td>
+      <td>.vn</td>
+      <td>VN</td>
+      <td>VNM</td>
+      <td>96648680.0</td>
+      <td>1.7</td>
+      <td>37.39</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>YEMEN</td>
+      <td>The_Republic_of_Yemen</td>
+      <td>.ye</td>
+      <td>YE</td>
+      <td>YEM</td>
+      <td>32284044.0</td>
+      <td>14.5</td>
+      <td>58.73</td>
+    </tr>
+    <tr>
+      <th>165</th>
+      <td>ZAMBIA</td>
+      <td>The_Republic_of_Zambia</td>
+      <td>.zm</td>
+      <td>ZM</td>
+      <td>ZMB</td>
+      <td>18927716.0</td>
+      <td>3.6</td>
+      <td>54.65</td>
+    </tr>
+    <tr>
+      <th>166</th>
+      <td>ZIMBABWE</td>
+      <td>The_Republic_of_Zimbabwe</td>
+      <td>.zw</td>
+      <td>ZW</td>
+      <td>ZWE</td>
+      <td>15669663.0</td>
+      <td>7.0</td>
+      <td>42.33</td>
+    </tr>
+  </tbody>
+</table>
+<p>165 rows × 8 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Se tienen dos resultados merge_final_copia y merge_final:</span>
+
+<span class="c1"># Considerando eliminar los países que contenían NaN</span>
+<span class="n">merge_final_copia</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>Official_State_Name</th>
+      <th>InternetccTLD</th>
+      <th>iso2</th>
+      <th>iso3</th>
+      <th>Population_in_2020</th>
+      <th>Obesity_adult_prevalence_rate</th>
+      <th>numero_anual_muertes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AFGHANISTAN</td>
+      <td>The_Islamic_Republic_of_Afghanistan</td>
+      <td>.af</td>
+      <td>AF</td>
+      <td>AFG</td>
+      <td>38972236.0</td>
+      <td>2.2</td>
+      <td>62.57</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ALBANIA</td>
+      <td>The_Republic_of_Albania</td>
+      <td>.al</td>
+      <td>AL</td>
+      <td>ALB</td>
+      <td>2866850.0</td>
+      <td>21.3</td>
+      <td>29.59</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ALGERIA</td>
+      <td>The_People's_Democratic_Republic_of_Algeria</td>
+      <td>.dz</td>
+      <td>DZ</td>
+      <td>DZA</td>
+      <td>43451668.0</td>
+      <td>16.0</td>
+      <td>54.98</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ANGOLA</td>
+      <td>The_Republic_of_Angola</td>
+      <td>.ao</td>
+      <td>AO</td>
+      <td>AGO</td>
+      <td>33428490.0</td>
+      <td>6.4</td>
+      <td>73.83</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ANTIGUA_AND_BARBUDA</td>
+      <td>Antigua_and_Barbuda</td>
+      <td>.ag</td>
+      <td>AG</td>
+      <td>ATG</td>
+      <td>92672.0</td>
+      <td>25.6</td>
+      <td>42.39</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>UZBEKISTAN</td>
+      <td>The_Republic_of_Uzbekistan</td>
+      <td>.uz</td>
+      <td>UZ</td>
+      <td>UZB</td>
+      <td>33526662.0</td>
+      <td>15.1</td>
+      <td>37.22</td>
+    </tr>
+    <tr>
+      <th>163</th>
+      <td>VIETNAM</td>
+      <td>The_Socialist_Republic_of_Viet_Nam</td>
+      <td>.vn</td>
+      <td>VN</td>
+      <td>VNM</td>
+      <td>96648680.0</td>
+      <td>1.7</td>
+      <td>37.39</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>YEMEN</td>
+      <td>The_Republic_of_Yemen</td>
+      <td>.ye</td>
+      <td>YE</td>
+      <td>YEM</td>
+      <td>32284044.0</td>
+      <td>14.5</td>
+      <td>58.73</td>
+    </tr>
+    <tr>
+      <th>165</th>
+      <td>ZAMBIA</td>
+      <td>The_Republic_of_Zambia</td>
+      <td>.zm</td>
+      <td>ZM</td>
+      <td>ZMB</td>
+      <td>18927716.0</td>
+      <td>3.6</td>
+      <td>54.65</td>
+    </tr>
+    <tr>
+      <th>166</th>
+      <td>ZIMBABWE</td>
+      <td>The_Republic_of_Zimbabwe</td>
+      <td>.zw</td>
+      <td>ZW</td>
+      <td>ZWE</td>
+      <td>15669663.0</td>
+      <td>7.0</td>
+      <td>42.33</td>
+    </tr>
+  </tbody>
+</table>
+<p>165 rows × 8 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># considerando el valor de NaN como 0</span>
+<span class="n">merge_final</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[53]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>Official_State_Name</th>
+      <th>InternetccTLD</th>
+      <th>iso2</th>
+      <th>iso3</th>
+      <th>Population_in_2020</th>
+      <th>Obesity_adult_prevalence_rate</th>
+      <th>numero_anual_muertes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AFGHANISTAN</td>
+      <td>The_Islamic_Republic_of_Afghanistan</td>
+      <td>.af</td>
+      <td>AF</td>
+      <td>AFG</td>
+      <td>38972236.0</td>
+      <td>2.2</td>
+      <td>62.57</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ALBANIA</td>
+      <td>The_Republic_of_Albania</td>
+      <td>.al</td>
+      <td>AL</td>
+      <td>ALB</td>
+      <td>2866850.0</td>
+      <td>21.3</td>
+      <td>29.59</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ALGERIA</td>
+      <td>The_People's_Democratic_Republic_of_Algeria</td>
+      <td>.dz</td>
+      <td>DZ</td>
+      <td>DZA</td>
+      <td>43451668.0</td>
+      <td>16.0</td>
+      <td>54.98</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ANGOLA</td>
+      <td>The_Republic_of_Angola</td>
+      <td>.ao</td>
+      <td>AO</td>
+      <td>AGO</td>
+      <td>33428490.0</td>
+      <td>6.4</td>
+      <td>73.83</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ANTIGUA_AND_BARBUDA</td>
+      <td>Antigua_and_Barbuda</td>
+      <td>.ag</td>
+      <td>AG</td>
+      <td>ATG</td>
+      <td>92672.0</td>
+      <td>25.6</td>
+      <td>42.39</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>UZBEKISTAN</td>
+      <td>The_Republic_of_Uzbekistan</td>
+      <td>.uz</td>
+      <td>UZ</td>
+      <td>UZB</td>
+      <td>33526662.0</td>
+      <td>15.1</td>
+      <td>37.22</td>
+    </tr>
+    <tr>
+      <th>163</th>
+      <td>VIETNAM</td>
+      <td>The_Socialist_Republic_of_Viet_Nam</td>
+      <td>.vn</td>
+      <td>VN</td>
+      <td>VNM</td>
+      <td>96648680.0</td>
+      <td>1.7</td>
+      <td>37.39</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>YEMEN</td>
+      <td>The_Republic_of_Yemen</td>
+      <td>.ye</td>
+      <td>YE</td>
+      <td>YEM</td>
+      <td>32284044.0</td>
+      <td>14.5</td>
+      <td>58.73</td>
+    </tr>
+    <tr>
+      <th>165</th>
+      <td>ZAMBIA</td>
+      <td>The_Republic_of_Zambia</td>
+      <td>.zm</td>
+      <td>ZM</td>
+      <td>ZMB</td>
+      <td>18927716.0</td>
+      <td>3.6</td>
+      <td>54.65</td>
+    </tr>
+    <tr>
+      <th>166</th>
+      <td>ZIMBABWE</td>
+      <td>The_Republic_of_Zimbabwe</td>
+      <td>.zw</td>
+      <td>ZW</td>
+      <td>ZWE</td>
+      <td>15669663.0</td>
+      <td>7.0</td>
+      <td>42.33</td>
+    </tr>
+  </tbody>
+</table>
+<p>167 rows × 8 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">merge_final_copia</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">merge_final_copia</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[55]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>Official_State_Name</th>
+      <th>InternetccTLD</th>
+      <th>iso2</th>
+      <th>iso3</th>
+      <th>Population_in_2020</th>
+      <th>Obesity_adult_prevalence_rate</th>
+      <th>numero_anual_muertes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AFGHANISTAN</td>
+      <td>The_Islamic_Republic_of_Afghanistan</td>
+      <td>.af</td>
+      <td>AF</td>
+      <td>AFG</td>
+      <td>38972236.0</td>
+      <td>2.2</td>
+      <td>62.57</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ALBANIA</td>
+      <td>The_Republic_of_Albania</td>
+      <td>.al</td>
+      <td>AL</td>
+      <td>ALB</td>
+      <td>2866850.0</td>
+      <td>21.3</td>
+      <td>29.59</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ALGERIA</td>
+      <td>The_People's_Democratic_Republic_of_Algeria</td>
+      <td>.dz</td>
+      <td>DZ</td>
+      <td>DZA</td>
+      <td>43451668.0</td>
+      <td>16.0</td>
+      <td>54.98</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ANGOLA</td>
+      <td>The_Republic_of_Angola</td>
+      <td>.ao</td>
+      <td>AO</td>
+      <td>AGO</td>
+      <td>33428490.0</td>
+      <td>6.4</td>
+      <td>73.83</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ANTIGUA_AND_BARBUDA</td>
+      <td>Antigua_and_Barbuda</td>
+      <td>.ag</td>
+      <td>AG</td>
+      <td>ATG</td>
+      <td>92672.0</td>
+      <td>25.6</td>
+      <td>42.39</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>160</th>
+      <td>UZBEKISTAN</td>
+      <td>The_Republic_of_Uzbekistan</td>
+      <td>.uz</td>
+      <td>UZ</td>
+      <td>UZB</td>
+      <td>33526662.0</td>
+      <td>15.1</td>
+      <td>37.22</td>
+    </tr>
+    <tr>
+      <th>161</th>
+      <td>VIETNAM</td>
+      <td>The_Socialist_Republic_of_Viet_Nam</td>
+      <td>.vn</td>
+      <td>VN</td>
+      <td>VNM</td>
+      <td>96648680.0</td>
+      <td>1.7</td>
+      <td>37.39</td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>YEMEN</td>
+      <td>The_Republic_of_Yemen</td>
+      <td>.ye</td>
+      <td>YE</td>
+      <td>YEM</td>
+      <td>32284044.0</td>
+      <td>14.5</td>
+      <td>58.73</td>
+    </tr>
+    <tr>
+      <th>163</th>
+      <td>ZAMBIA</td>
+      <td>The_Republic_of_Zambia</td>
+      <td>.zm</td>
+      <td>ZM</td>
+      <td>ZMB</td>
+      <td>18927716.0</td>
+      <td>3.6</td>
+      <td>54.65</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>ZIMBABWE</td>
+      <td>The_Republic_of_Zimbabwe</td>
+      <td>.zw</td>
+      <td>ZW</td>
+      <td>ZWE</td>
+      <td>15669663.0</td>
+      <td>7.0</td>
+      <td>42.33</td>
+    </tr>
+  </tbody>
+</table>
+<p>165 rows × 8 columns</p>
 </div>
 </div>
 
